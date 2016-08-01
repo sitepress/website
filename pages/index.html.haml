@@ -1,0 +1,30 @@
+---
+title: Home
+---
+
+!!!
+%html
+  %head
+    %title==#{resource.data["title"]} | Mascot
+    %link(href="/site.css" type="text/css" rel="stylesheet")
+  %body
+    %header
+      %img#logo(src="/logo.svg" m-small)
+      .tagline
+        %h1 Mascot
+        %p Build amazing websites
+    %section(role="main")
+      %nav
+        -resources.select{ |r| r.data.has_key? "title" }.each do |r|
+          %a(href="#{r.request_path}")=r.data["title"]
+      %article
+        %h2 Say hello to Mascot
+        %p Mascot is a set of tools that helps you build awesome websites. You can embed it in Rails or you can compile your website and deploy a bunch of files.
+
+        %h2 Why Mascot?
+        %p You can embed Mascot in a Rails app to serve up content. You can point it at a folder full of files, compile it staticlly, and deploy it. You can run it in a Sinatra app.
+
+        %h2 How does it compare to Middleman?
+        %p Mascot was heavily inspired from it, but it was designed with an eye for being embeddable in popular Ruby web frameworks, like Rails, in addition to being a static site generator.
+
+    %footer

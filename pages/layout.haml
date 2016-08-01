@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Mascot
+    %link(href="/site.css" type="text/css" rel="stylesheet")
+  %body
+    %nav
+      -resources.select{ |r| r.data.has_key? "title" }.each do |r|
+        %a(href="#{r.request_path}")=r.data["title"]
+    %section~yield
