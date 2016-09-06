@@ -1,14 +1,14 @@
 PATH
   remote: ../gem/mascot-server
   specs:
-    mascot-server (0.1.7)
-      mascot (= 0.1.7)
+    mascot-server (0.1.15)
+      mascot (= 0.1.15)
       tilt
 
 PATH
   remote: ../gem/mascot
   specs:
-    mascot (0.1.7)
+    mascot (0.1.15)
       mime-types (>= 2.99)
 
 GEM
@@ -19,6 +19,8 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    puma (2.16.0)
+    rack (2.0.1)
     rdiscount (2.2.0.1)
     sass (3.4.22)
     tilt (2.0.5)
@@ -30,6 +32,8 @@ DEPENDENCIES
   haml
   mascot!
   mascot-server!
+  puma
+  rack
   rdiscount
   sass
 

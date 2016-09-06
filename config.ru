@@ -1,4 +1,4 @@
 require "mascot-server"
+require_relative "site"
 
-sitemap = Mascot::Sitemap.new(root: "content")
-run Mascot::Server.new(sitemap: sitemap)
+run Mascot.server

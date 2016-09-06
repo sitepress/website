@@ -1,4 +1,22 @@
 !!!
 %html
   %head
-  %body~yield
+    %meta(charset="utf-8")
+    %title==#{resource.data["title"]} | Mascot
+    %link(href="/stylesheets/site.css" type="text/css" rel="stylesheet")
+  %body
+    %header
+      %a(href="/index.html" title="Home")
+        %img#logo(src="/images/logo.svg" m-small)
+    %section(role="main")
+      %nav
+        %h3 Docs
+        -resources.glob("*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
+          %a(href="/#{r.request_path}")=r.data["title"]
+        %h3 Frameworks
+        -resources.glob("frameworks/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
+          %a(href="/#{r.request_path}")=r.data["title"]
+      %article
+        %h1=resource.data["title"]
+        ~yield
+    %footer
