@@ -2,10 +2,10 @@
 title: Ruby on Rails
 ---
 
-Mascot was designed to be embedded in Rails. To get started add this line to your application's Gemfile:
+Sitepress was designed to be embedded in Rails. To get started add this line to your application's Gemfile:
 
 ```ruby
-gem 'mascot-rails'
+gem 'sitepress-rails'
 ```
 
 And then execute:

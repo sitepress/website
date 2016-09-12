@@ -1,16 +1,3 @@
-PATH
-  remote: ../gem/mascot-server
-  specs:
-    mascot-server (0.1.15)
-      mascot (= 0.1.15)
-      tilt
-
-PATH
-  remote: ../gem/mascot
-  specs:
-    mascot (0.1.15)
-      mime-types (>= 2.99)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -23,6 +10,11 @@ GEM
     rack (2.0.1)
     rdiscount (2.2.0.1)
     sass (3.4.22)
+    sitepress (0.1.16)
+      mime-types (>= 2.99)
+    sitepress-server (0.1.16)
+      sitepress (= 0.1.16)
+      tilt
     tilt (2.0.5)
 
 PLATFORMS
@@ -30,12 +22,11 @@ PLATFORMS
 
 DEPENDENCIES
   haml
-  mascot!
-  mascot-server!
   puma
   rack
   rdiscount
   sass
+  sitepress-server
 
 BUNDLED WITH
    1.12.4

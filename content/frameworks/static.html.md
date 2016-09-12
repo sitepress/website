@@ -2,4 +2,4 @@
 title: Static
 ---
 
-Mascot will eventually ship with a static site compiler.
+Sitepress will eventually ship with a static site compiler.
