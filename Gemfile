@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 
-gem "sitepress-server"
+path "../gem" do
+  gem "sitepress"
+  gem "sitepress-server"
+end
+
 gem "haml"
 gem "sass"
 gem "rdiscount"

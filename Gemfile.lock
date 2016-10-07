@@ -1,3 +1,12 @@
+PATH
+  remote: ../gem
+  specs:
+    sitepress (0.1.19)
+      mime-types (>= 2.99)
+    sitepress-server (0.1.19)
+      sitepress (= 0.1.19)
+      tilt
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -10,11 +19,6 @@ GEM
     rack (2.0.1)
     rdiscount (2.2.0.1)
     sass (3.4.22)
-    sitepress (0.1.16)
-      mime-types (>= 2.99)
-    sitepress-server (0.1.16)
-      sitepress (= 0.1.16)
-      tilt
     tilt (2.0.5)
 
 PLATFORMS
@@ -26,7 +30,8 @@ DEPENDENCIES
   rack
   rdiscount
   sass
-  sitepress-server
+  sitepress!
+  sitepress-server!
 
 BUNDLED WITH
    1.12.4

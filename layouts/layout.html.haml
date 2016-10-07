@@ -3,20 +3,20 @@
   %head
     %meta(charset="utf-8")
     %title==#{resource.data["title"]} | Sitepress
+    %link(href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet")
     %link(href="/stylesheets/site.css" type="text/css" rel="stylesheet")
   %body
     %header
+    %nav.sidebar
       %a(href="/index.html" title="Home")
-        %img#logo(src="/images/logo.svg" m-small)
-    %section(role="main")
-      %nav
-        %h3 Docs
-        -resources.glob("*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
-          %a(href="/#{r.request_path}")=r.data["title"]
-        %h3 Frameworks
-        -resources.glob("frameworks/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
-          %a(href="/#{r.request_path}")=r.data["title"]
-      %article
-        %h1=resource.data["title"]
-        ~yield
+        %img#logo(src="/images/logo.svg")
+      %strong.sidebar--header Basics
+      -resources.glob("pages/basics/*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
+        %a(href="#{r.request_path}")=r.data["title"]
+      %strong.sidebar--header Frameworks
+      -resources.glob("pages/frameworks/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
+        %a(href="#{r.request_path}")=r.data["title"]
+    .documentation
+      %h1=resource.data["title"]
+      ~yield
     %footer
