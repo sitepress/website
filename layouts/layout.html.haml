@@ -5,16 +5,23 @@
     %title==#{resource.data["title"]} | Sitepress
     %link(href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet")
     %link(href="/stylesheets/site.css" type="text/css" rel="stylesheet")
-  %body
-    %nav.sidebar
+  %body.layout
+    %header.layout--header
       %a(href="/index.html" title="Home")
         %img#logo(src="/images/logo.svg")
-      %strong.sidebar--header Basics
-      -resources.glob("pages/basics/*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
-        %a(href="#{r.request_path}")=r.data["title"]
-      %strong.sidebar--header Frameworks
-      -resources.glob("pages/frameworks/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
-        %a(href="#{r.request_path}")=r.data["title"]
-    .documentation
-      %h1=resource.data["title"]
-      ~yield
+    .layout--body
+      %section.layout--content
+        %h1=resource.data["title"]
+        ~yield
+      %nav.layout--nav
+        .sidebar
+          %strong.sidebar--header Basics
+          -resources.glob("pages/basics/*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
+            %a(href="#{r.request_path}")=r.data["title"]
+          %strong.sidebar--header Getting started
+          -resources.glob("pages/getting-started/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
+            %a(href="#{r.request_path}")=r.data["title"]
+          %strong.sidebar--header Project
+          -resources.glob("pages/project/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
+            %a(href="#{r.request_path}")=r.data["title"]
+    %footer.layout--footer

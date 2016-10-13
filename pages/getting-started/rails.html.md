@@ -1,5 +1,5 @@
 ---
-title: Ruby on Rails
+title: Rails
 ---
 
 Sitepress was designed to be embedded in Rails. To get started add this line to your application's Gemfile:
@@ -14,7 +14,7 @@ And then execute:
 $ bundle
 ```
 
-Then add pages to the `app/content` directory:
+Then add pages to the `app/content/pages` directory:
 
 ```bash
 $ echo "<h1>Hello</h1><p>It is <%= Time.now %> o'clock</p>" > app/views/pages/hello.html.erb

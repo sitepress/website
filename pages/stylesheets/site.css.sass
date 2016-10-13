@@ -1,38 +1,48 @@
+$spacing: 1.5em
+$page-width: 40em
+$base-font-size: 13pt
+
 body
   font-family: -apple-system, Helvetica, Arial, sans-serif
-  line-height: 1.5em
-  font-size: 14pt
+  line-height: $spacing
+  font-size: $base-font-size
   box-sizing: border-box
+
+.layout
   display: flex
-  flex-direction: row
-  margin: 1.5em auto
-  .sidebar
+  flex-direction: column
+  margin: $spacing
+  &--header
+  &--body
     display: flex
-    flex-direction: column
-    flex-basis: 1
-    padding: 2rem
-    border-right: 1px solid #ddd
-    &--header
-      margin-top: 1rem
-  .documentation
-    flex-basis: 1
-    padding: 2rem
-header
-  text-align: center
-// section[role="main"]
+    flex-direction: row
+  &--nav
+    order: -1
+    min-width: 8em
+    margin-right: $spacing
+    padding-right: $spacing
+    border-right: 1px solid #eee
+  &--content
+    flex: 1
+  &--footer
+
+.sidebar
+  & > *
+    display: block
+  &--header
+    margin-top: $spacing
 img#logo
   max-width: 6rem
   height: 6rem
-  margin: auto
 pre
   background: #eee
-  padding: 1rem
-  line-height: 1.5rem
+  padding: $spacing
+  line-height: $spacing
   font-size: .9em
   font-weight: 100
-  border-radius: 0.25rem
   overflow: scroll
 p > code
   background: #eee
   font-size: .9em
   font-weight: 100
+
