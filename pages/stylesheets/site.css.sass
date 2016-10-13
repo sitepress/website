@@ -1,24 +1,22 @@
 body
-  font-family: Lato, -apple-system, Helvetica, Arial, sans-serif
-  margin: 2em
+  font-family: -apple-system, Helvetica, Arial, sans-serif
   line-height: 1.5em
   font-size: 14pt
   box-sizing: border-box
   display: flex
   flex-direction: row
+  margin: 1.5em auto
   .sidebar
     display: flex
     flex-direction: column
     flex-basis: 1
-    max-width: 30%
-    min-width: 15%
+    padding: 2rem
     border-right: 1px solid #ddd
     &--header
       margin-top: 1rem
   .documentation
     flex-basis: 1
-  .sidebar + .documentation
-    margin-left: 2rem
+    padding: 2rem
 header
   text-align: center
 // section[role="main"]

@@ -1,10 +1,10 @@
 PATH
   remote: ../gem
   specs:
-    sitepress (0.1.19)
+    sitepress (0.1.20)
       mime-types (>= 2.99)
-    sitepress-server (0.1.19)
-      sitepress (= 0.1.19)
+    sitepress-server (0.1.20)
+      sitepress (= 0.1.20)
       tilt
 
 GEM
