@@ -10,4 +10,4 @@ Static site generators, like [Middleman](https://middlemanapp.com) and [Jekyll](
 
 Sitepress is the missing piece. It has all of the features you'd exepect from a static site generator, but is capable of being embedded in Rails, Sinatra, any rack app, or event a static site generator compiler.
 
-What are you waiting for? [Get started with Sitepress](/basics/getting-started)
+What are you waiting for? [Get started with Sitepress](/basics/frontmatter.html)
