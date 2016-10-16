@@ -14,10 +14,10 @@ And then execute:
 $ bundle
 ```
 
-Then add pages to the `app/content/pages` directory:
+Then create the directory `app/content/pages` and add the page below to `hello.html.erb`:
 
 ```bash
-$ echo "<h1>Hello</h1><p>It is <%= Time.now %> o'clock</p>" > app/views/pages/hello.html.erb
+$ echo "<h1>Hello</h1><p>It is <%= Time.now %> o'clock</p>" > app/content/pages/hello.html.erb
 ```
 
 Point your browser to `http://127.0.0.1:3000/hello` and if all went well you should see the page you just created.

@@ -1,48 +1,86 @@
-$spacing: 1.5em
-$page-width: 40em
+$spacing: 2rem
+$line-height: 1.5rem
+$page-width: 40rem
 $base-font-size: 13pt
+$black: #000
+$white: #fefefe
+$light-gray: lighten($black, 40%)
+$sidebar-width: 8rem
 
 body
   font-family: -apple-system, Helvetica, Arial, sans-serif
-  line-height: $spacing
+  line-height: $line-height
   font-size: $base-font-size
   box-sizing: border-box
+  font-weight: 300
+  background: $white
+  color: $black
+
+.content
+  h1
+    font-size: 2rem
+  h2
+    font-size: 1.414rem
+  h3
+    font-size: 1.155rem
+  h4
+    font-size: 1rem
+  h5
+    font-size: 0.894rem
+  h6
+    font-size: 0.816rem
+  pre
+    background: #eee
+    padding: 1rem
+    font-weight: 100
+    overflow: auto
+  code
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace
+    font-size: 1rem
+  p > code
+    background: #eee
+    padding: 0.05rem
+  a
+    font-weight: 100
+    line-height: inherit
+    color: $light-gray
 
 .layout
   display: flex
   flex-direction: column
-  margin: $spacing
+  margin: 0
+  padding: 0
+  height: 100vh
   &--header
+    display: none
+  &--footer
+    display: none
   &--body
     display: flex
     flex-direction: row
-  &--nav
-    order: -1
-    min-width: 8em
-    margin-right: $spacing
-    padding-right: $spacing
+    min-height: 100%
+  &--sidebar
+    min-width: $sidebar-width
+    padding: $spacing
     border-right: 1px solid #eee
+    &--logo
+      display: flex
+      align-items: center
   &--content
     flex: 1
-  &--footer
+    padding: $spacing
 
 .sidebar
   & > *
     display: block
   &--header
     margin-top: $spacing
+  a
+    color: $light-gray
+    text-decoration: none
+    &.active
+      color: $black
+      font-weight: normal
 img#logo
   max-width: 6rem
   height: 6rem
-pre
-  background: #eee
-  padding: $spacing
-  line-height: $spacing
-  font-size: .9em
-  font-weight: 100
-  overflow: scroll
-p > code
-  background: #eee
-  font-size: .9em
-  font-weight: 100
-

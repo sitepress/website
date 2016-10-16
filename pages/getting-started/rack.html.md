@@ -4,12 +4,43 @@ title: Rack
 
 Sitepress ships with a Rack app that's great for embedding Sitepress sites into any Rack app or deploy to Heroku.
 
-When you setup Sitepress, the first thing you do is point it a `Site` at a directory full of files that will be rendered as webpages. Let's take a look at a sitemap in more detail:
+First, install the `sitepress-server` gem.
+
+```
+gem install sitepress-server
+```
+
+or bundle it into your rack application:
 
 ```ruby
-site = Sitepress::Site.new(root_path: "content")
+gem "sitepress-server"
+```
 
+In the root of your application directory, create a `config.ru` file wih the following:
+
+```ruby
+require "sitepress"
+
+site = Sitepress::Site.new(root_path: "content")
 run Sitepress::Server.new(site: site)
 ```
 
-The server boots with all the resources
+Then create a content folder that will hold all of your pages:
+
+```bash
+$ mkdir -f content/pages
+```
+
+And finally add a page to the pages directory:
+
+```bash
+$ echo "<h1>Hello</h1><p>It is <%= Time.now %> o'clock</p>" > content/pages/index.html.erb
+```
+
+Then boot the server:
+
+```bash
+bundle exec rackup config.ru
+```
+
+Now open `https://127.0.0.1:9292/index.html` to view the page!

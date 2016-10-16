@@ -2,26 +2,25 @@
 %html
   %head
     %meta(charset="utf-8")
-    %title==#{resource.data["title"]} | Sitepress
+    %title==#{current_page.data["title"]} | Sitepress
     %link(href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet")
     %link(href="/stylesheets/site.css" type="text/css" rel="stylesheet")
   %body.layout
-    %header.layout--header
-      %a(href="/index.html" title="Home")
-        %img#logo(src="/images/logo.svg")
     .layout--body
-      %section.layout--content
-        %h1=resource.data["title"]
-        ~yield
-      %nav.layout--nav
-        .sidebar
+      .layout--sidebar
+        .layout--sidebar--logo
+          %a(href="/index.html" title="Home")
+            %img#logo(src="/images/logo.svg")
+        %nav.sidebar
           %strong.sidebar--header Basics
-          -resources.glob("pages/basics/*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
-            %a(href="#{r.request_path}")=r.data["title"]
+          -site.resources.glob("pages/basics/*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
+            =link_to_if_current r.data["title"], r
           %strong.sidebar--header Getting started
-          -resources.glob("pages/getting-started/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
-            %a(href="#{r.request_path}")=r.data["title"]
+          -site.resources.glob("pages/getting-started/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
+            =link_to_if_current r.data["title"], r
           %strong.sidebar--header Project
-          -resources.glob("pages/project/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
-            %a(href="#{r.request_path}")=r.data["title"]
-    %footer.layout--footer
+          -site.resources.glob("pages/project/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
+            =link_to_if_current r.data["title"], r
+      %section.layout--content.content
+        %h1=current_page.data["title"]
+        ~yield
