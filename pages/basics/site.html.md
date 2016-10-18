@@ -2,31 +2,67 @@
 title: Site
 ---
 
-The site sits on top of a directory full of html, erb, haml, etc. files that will eventually be rendered for a website.
+The `Site` class is the primary way you'll interact with Sitepress pages, templates, or helpers. It sits on top of a directory structure that looks something like this:
 
-## Resources
+```
+├── helpers
+│   ├── page_collection_helpers.rb
+│   └── page_helpers.rb
+├── layouts
+│   └── layout.html.haml
+└── pages
+    ├── index.html.md
+    └── stylesheets
+```
 
-An asset is given to a resource to handle all web aspects of the asset including the request path, rendering, etc.
+## Helpers
+
+The `helpers` directory is where you stash all of the Ruby helpers for your project. If Sitepress is embedded in rails, these helpers are actually Rails view helpers. If you're running Sitepress in a rack app or as a static site its simply a Ruby module.
+
+## Layouts
+
+Layouts are the files that are wrapped around your pages. They'll look a little something like this:
+
+```erb
+<html>
+  <head>
+    <title><%= current_page.data["title"] %></title>
+  </head>
+  <body><% yield %></body>
+</html>
+```
+
+The contents of the files in your `pages` directory will be displayed inside the `yield` block when the page is rendered.
+
+## Pages
+
+The `pages` directory is where all the pages on your website live. The path of a file, relative to the pages directory, is the request path. For example, a file in `pages/hello/world.html` would be accessible via `https://www.example/com/hello/world.html`.
+
+Templating languages, such as [ERB](https://ruby-doc.org/stdlib-2.3.1/libdoc/erb/rdoc/ERB.html) or [HAML](http://haml.info), may be used by pages by adding the extension at the end of the file. For example, the file `pages/hello/world.html.haml` would be accessible via `https://www.example/com/hello/world.html`.
+
+To enable templating languages in Sitepress, you'll need to make sure the respective gem is installed and the Sitepress environment supports it.
 
 ### Get a list of all your site pages
 
-To get a list of all the resources within your site, run:
+To get a list of all the pages, known as resources, within your site, run:
 
 ```ruby
 site = Sitepress::Site.new(root_path: "/my/site")
-site.resources # Lists all the pages/resources in the directory.
+site.resources # Lists all the pages/resources in the directory
 ```
 
-### Querying assets from the site
+### Resource glob
+
+A very common use of Sitepress is to get all of the pages within a specific directory:
 
 ```ruby
 site = Sitepress::Site.new(root_path: "/my/site")
 video_pages = site.resources.glob("videos/*html*")
 ```
 
-### Other examples of queries
+Refer to the Ruby [Dir#glob](https://ruby-doc.org/core-2.2.0/Dir.html#method-c-glob) documentation for the patterns you may use to glob resources.
 
-Resources are just plain old Ruby objects, which means you could query them via:
+Pages are just plain old Ruby objects. If you need to query or filter a collection you just:
 
 ```ruby
 site = Sitepress::Site.new(root_path: "/my/site")
@@ -35,28 +71,24 @@ youtube_pages = site.resources.glob("videos/*html*").select do |r|
 end
 ```
 
-## Nodes
+The [`Sitepress::Resource` documentation](http://www.rubydoc.info/gems/sitepress/Sitepress/Resource) provides a good overview of the methods and attributes you can use to filter site resources.
 
-If you dig one level deeper below resources, you'll find the resources are actually organized as a tree via resource nodes.
+### Traversing pages
+
+Sitepress pages are organized as a hierarchical tree. For example, its possible to navigate pages like this:
 
 ```ruby
-# Assume `/my/site` has the folders `/team/:name/:person_name`
 site = Sitepress::Site.new(root_path: "/my/site")
-# The path `/my/site` is the root node.
-developers_page = site.root.dig("team", "developers")
-# Assume each developer has a page, e.g. `/team/developers/brad`.
-puts "There are #{developers_page.children.size} on the Development team"
-# Assume there's pages as `/team/executives`, `/team/sales`, etc.
-developers_page.siblings.each do |resource|
-  # Prints the name of the team and the number of people on it, as
-  # defined in each child page
-  puts "#{resource.data["title"]} has #{resource.children.size} people on the team"
-end
+summary_chapter = site.resources.glob("books/html-for-newbs/summary.html.*")
+bread_crumb_pages = summary_chapter.parents # All parents
+other_chapters = summary_chapter.siblings   # All siblings, excluding self
+title_page = summary_chapter.parent         # Most immediate parent
+all_chapters = title_page.children          # All immediate children
 ```
 
 ## Resource manipulation
 
-What if you want to programatically manipulate your assets? For example, maybe you want to set the layout for the `youtube_pages` to `video`. The Site's `manipulate` function makes that possible?
+What if you want to programmatically manipulate your resources? For example, maybe you want to set the layout for the `youtube_pages` to `video`. The Site's `manipulate` function makes that possible:
 
 ```ruby
 site = Sitepress::Site.new(root_path: "/my/site")
@@ -75,7 +107,3 @@ site.manipulate do |resource, root|
   root.flatten.remove resource if resource.data["private"]
 end
 ```
-
-## Assets
-
-An asset represents all of your websites' files on disk. They could include HTML pages, templated pages like haml or erb, images, javascripts, CSS files, CSS pre-processor languages, etc. Assets understands where those files are located and how to parse frontmatter data from them.

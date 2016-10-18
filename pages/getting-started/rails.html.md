@@ -2,13 +2,13 @@
 title: Rails
 ---
 
-Sitepress was designed to be embedded in Rails. To get started add this line to your application's Gemfile:
+Sitepress was originally designed to be embedded in Rails. To get started add this line to your application's Gemfile:
 
 ```ruby
 gem 'sitepress-rails'
 ```
 
-And then execute:
+And then bundle it into your application:
 
 ```bash
 $ bundle

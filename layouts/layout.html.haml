@@ -12,11 +12,11 @@
           %a(href="/index.html" title="Home")
             %img#logo(src="/images/logo.svg")
         %nav.sidebar
-          %strong.sidebar--header Basics
-          -site.resources.glob("pages/basics/*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
-            =link_to_if_current r.data["title"], r
           %strong.sidebar--header Getting started
           -site.resources.glob("pages/getting-started/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|
+            =link_to_if_current r.data["title"], r
+          %strong.sidebar--header Basics
+          -site.resources.glob("pages/basics/*.html*").select{ |r| r.data.has_key?("title") and r.request_path != "index.html" }.each do |r|
             =link_to_if_current r.data["title"], r
           %strong.sidebar--header Project
           -site.resources.glob("pages/project/*.html*").select{ |r| r.data.has_key? "title" }.each do |r|

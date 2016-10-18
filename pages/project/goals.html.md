@@ -8,6 +8,6 @@ Sitepress aims to be a fast, embeddable website manager that can be used both in
 
 * **Composable** - Sitepress is broken apart into several gems that are optimized for their environments. For example, the `sitepress-rails` gem uses as much of the rendering infrastructure from Rails as possible.
 
-* **Speed** - Sitepress is benchmarked using a 10,000 page site as part of a regular test suite. Performance and speed is a goal of this project. The code that organizes pages is intentionally left minimal to maximize performance.
+* **Speed** - Sitepress is benchmarked using a 10,000 page site as part of a regular test suite. Performance and speed is a goal of this project. The philosophy of performance is "less is more"; or the less code needed for Sitepress, the less chances for it to be slow.
 
 More immediate features and milestones may be found on [Github](https://github.com/sitepress/sitepress/projects).
