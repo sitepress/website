@@ -107,3 +107,5 @@ site.manipulate do |resource, root|
   root.flatten.remove resource if resource.data["private"]
 end
 ```
+
+Next, read about working with [Frontmatter page metadata](/basics/frontmatter.html).
