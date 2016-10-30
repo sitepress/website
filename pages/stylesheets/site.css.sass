@@ -4,25 +4,29 @@ $page-width: 40rem
 $base-font-size: 13pt
 $black: #000
 $white: #fefefe
-$light-gray: lighten($black, 40%)
 $sidebar-width: 8rem
+$accent-color: #5d3d29
+$light-accent-color: mix($white, $accent-color, 95%)
+$light-border-color: mix($white, $accent-color, 85%)
 
 body
-  font-family: -apple-system, Helvetica, Arial, sans-serif
   line-height: $line-height
   font-size: $base-font-size
   box-sizing: border-box
-  font-weight: 300
+  font-family: -apple-system, sans-serif
   background: $white
   color: $black
 
 .content
+  h1,h2,h3,h4,h5,h6
+    color: $accent-color
   h1
     font-size: 2rem
   h2
     font-size: 1.414rem
   h3
     font-size: 1.155rem
+    border-bottom: 1px solid $light-border-color
   h4
     font-size: 1rem
   h5
@@ -30,20 +34,18 @@ body
   h6
     font-size: 0.816rem
   pre
-    background: #eee
+    background: $light-accent-color
     padding: 1rem
-    font-weight: 100
     overflow: auto
   code
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace
-    font-size: 1rem
+    font-size: 0.9rem
+    line-height: 1rem
   p > code
-    background: #eee
+    background: #f3f3f3
     padding: 0.05rem
   a
-    font-weight: 100
-    line-height: inherit
-    color: $light-gray
+    color: $accent-color
 
 .layout
   display: flex
@@ -61,7 +63,6 @@ body
     min-height: 100vh
     min-width: $sidebar-width
     padding: $spacing
-    border-right: 1px solid #eee
     &--logo
       display: flex
       align-items: center
@@ -69,17 +70,20 @@ body
     flex: 1
     padding: $spacing
 
+.accented-sidebar
+  background: $accent-color
+  color: mix($accent-color, $white, 10%)
+
 .sidebar
   & > *
     display: block
   &--header
     margin-top: $spacing
   a
-    color: $light-gray
+    color: mix($accent-color, $white, 40%)
     text-decoration: none
     &.active
-      color: $black
-      font-weight: normal
+      color: $white
 img#logo
-  max-width: 6rem
-  height: 6rem
+  max-width: 100%
+  height: $sidebar-width
