@@ -6,8 +6,8 @@ Sitepress ships with a Rack app that's great for embedding Sitepress sites into 
 
 First, install the `sitepress-server` gem.
 
-```
-gem install sitepress-server
+```bash
+$ gem install sitepress-server
 ```
 
 or bundle it into your rack application:
@@ -40,7 +40,7 @@ $ echo "<h1>Hello</h1><p>It is <%= Time.now %> o'clock</p>" > content/pages/inde
 Then boot the server:
 
 ```bash
-bundle exec rackup config.ru
+$ bundle exec rackup config.ru
 ```
 
 Now open `https://127.0.0.1:9292/index.html` to view the page!

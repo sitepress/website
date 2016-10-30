@@ -2,17 +2,28 @@
 title: Static
 ---
 
-Sitepress will eventually ship with a static site compiler. For now the functionality exists in the [compiler branch](https://github.com/sitepress/sitepress/tree/compiler) of the Sitepress repo.
+Sitepress ships with a static site compiler. To get started, install the sitepress gem:
 
-The compiler API will eventually look something like this:
-
-```ruby
-require "sitepress-server"
-require_relative "site"
-
-compiler = Sitepress::Compiler.new(site: Sitepress.site)
-compiler.compile(target_path:
-  Sitepress.site.root_path.join("build"))
+```bash
+$ gem install sitepress
 ```
 
-In due time this complexity will be hidden behind a `sitepress` CLI utility.
+Then create a new sitepress site via:
+
+```bash
+$ sitepress new ./my-site
+```
+
+This command creates a skeleton site and bundles dependencies into the project. Next you'll want to change the directory to the project:
+
+```bash
+$ cd ./my-site
+```
+
+Then fire up the preview server:
+
+```bash
+$ sitepress server
+```
+
+And open the site at [http://127.0.0.1:8080/index.html](http://127.0.0.1:8080/index.html)
