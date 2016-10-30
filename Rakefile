@@ -1,5 +1,5 @@
 task :build do
-  sh "bundle exec ruby compile.rb"
+  sh "bundle exec sitepress compile"
 end
 
 task :deploy do

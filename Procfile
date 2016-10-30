@@ -1,1 +1,1 @@
-web: bundle exec puma
+web: bundle exec sitepress server --port $PORT
