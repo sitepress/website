@@ -20,6 +20,18 @@ The `Site` class is the primary way you'll interact with Sitepress pages, templa
 
 The `helpers` directory is where you stash all of the Ruby helpers for your project. If Sitepress is embedded in rails, these helpers are actually Rails view helpers. If you're running Sitepress in a rack app or as a static site its simply a Ruby module.
 
+What does a page helper look like? Something like this:
+
+```ruby
+module PageCollectionHelpers
+  # Accepts a `Dir.glob` pattern (e.g. `pages/*.html.*`) and sorts them in
+  # order as defined by the `order` Frontmatter key.
+  def ordered_pages(glob)
+    site.resources.glob(glob).sort_by { |r| r.data.fetch("order", Float::INFINITY) }
+  end
+end
+```
+
 ## Layouts
 
 Layouts are the files that are wrapped around your pages. They'll look a little something like this:
