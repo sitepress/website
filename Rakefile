@@ -3,7 +3,7 @@ task :build do
 end
 
 task :deploy do
-  sh "shart"
+  sh "aws s3 sync ./build s3://sitepress.cc/"
 end
 
 task default: %w[build deploy]
