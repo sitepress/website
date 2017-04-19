@@ -1,5 +1,6 @@
 ---
 title: Static
+order: 3
 ---
 
 Sitepress ships with a static site compiler. To get started, install the sitepress gem:

@@ -3,7 +3,7 @@ title: Sitepress
 layout: layouts/layout.html.haml
 ---
 
-Build content websites in any Ruby web framework including Rails, Sinatra, or even a static site.
+Build amazing content websites in any Ruby web framework including Rails, Sinatra, or even a static site.
 
 ## Why Sitepress?
 

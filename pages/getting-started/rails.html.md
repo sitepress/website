@@ -1,5 +1,6 @@
 ---
 title: Rails
+order: 1
 ---
 
 Sitepress was originally designed to be embedded in Rails. To get started add this line to your application's Gemfile:

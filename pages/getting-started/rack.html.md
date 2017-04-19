@@ -1,5 +1,6 @@
 ---
 title: Rack
+order: 2
 ---
 
 Sitepress ships with a Rack app that's great for embedding Sitepress sites into any Rack app or deploy to Heroku.
