@@ -33,7 +33,7 @@ youtube_pages = site.resources.glob("videos/*html*").select do |r|
 end
 ```
 
-The `pages/videos.html.haml` template could render HTML that links to the videos in the list:
+The `videos.html.haml` template could render HTML that links to the videos in the list:
 
 ```haml
 %html
@@ -41,7 +41,7 @@ The `pages/videos.html.haml` template could render HTML that links to the videos
     %title Vidoes
   %body
     %ul.videos
-      -site.resources.glob("pages/videos/*.html.*").each do |page|
+      -site.resources.glob("videos/*.html.*").each do |page|
         %li.video
           %a{href: page.request_path}=page.data.fetch("title")
 ```

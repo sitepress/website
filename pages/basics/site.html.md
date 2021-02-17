@@ -7,8 +7,8 @@ The `Site` class is the primary way you'll interact with Sitepress pages, templa
 
 ```
 ├── helpers
-│   ├── page_collection_helpers.rb
-│   └── page_helpers.rb
+│   ├── page_collection_helper.rb
+│   └── page_helper.rb
 ├── layouts
 │   └── layout.html.haml
 └── pages
@@ -23,7 +23,7 @@ The `helpers` directory is where you stash all of the Ruby helpers for your proj
 What does a page helper look like? Something like this:
 
 ```ruby
-module PageCollectionHelpers
+module PageCollectionHelper
   # Accepts a `Dir.glob` pattern (e.g. `pages/*.html.*`) and sorts them in
   # order as defined by the `order` Frontmatter key.
   def ordered_pages(glob)

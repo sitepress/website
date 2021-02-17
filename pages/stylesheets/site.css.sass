@@ -5,7 +5,7 @@ $base-font-size: 13pt
 $black: #000
 $white: #fefefe
 $sidebar-width: 8rem
-$accent-color: #5d3d29
+$accent-color: hsl(23,39%,26%)
 $light-accent-color: mix($white, $accent-color, 95%)
 $light-border-color: mix($white, $accent-color, 85%)
 
@@ -16,10 +16,15 @@ body
   font-family: -apple-system, sans-serif
   background: $white
   color: $black
+  @media(prefers-color-scheme: dark)
+    background: darken($accent-color, 10%)
+    color: mix($accent-color, $white, 10%)
 
 .content
   h1,h2,h3,h4,h5,h6
     color: $accent-color
+    @media(prefers-color-scheme: dark)
+      color: $white
   h1
     font-size: 2rem
   h2
@@ -37,16 +42,21 @@ body
     background: $light-accent-color
     padding: 1rem
     overflow: auto
+    @media(prefers-color-scheme: dark)
+      background: darken($accent-color, 15%)
+      color: mix($accent-color, $light-accent-color, 25%)
   code
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace
     font-size: 0.9rem
     line-height: 1rem
   p > code
-    background: #f3f3f3
     padding: 0.05rem
+    @media(prefers-color-scheme: dark)
+      color: mix($accent-color, $light-accent-color, 10%)
   a
     color: $accent-color
-
+    @media(prefers-color-scheme: dark)
+      color: mix($accent-color, $light-accent-color, 10%)
 .layout
   display: flex
   flex-direction: column

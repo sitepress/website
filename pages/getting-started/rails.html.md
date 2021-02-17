@@ -23,4 +23,4 @@ $ echo "<h1>Hello</h1><p>It is <%= Time.now %> o'clock</p>" > app/content/pages/
 
 Point your browser to `http://127.0.0.1:3000/hello` and if all went well you should see the page you just created.
 
-Next, read about [working with a Sitepress site](/basics/site.html).
+Next, read about [working with a Sitepress site](/basics/site).

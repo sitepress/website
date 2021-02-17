@@ -8,17 +8,17 @@
     .layout--body
       .layout--sidebar.accented-sidebar
         .layout--sidebar--logo
-          %a(href="/index.html" title="Home")
+          %a(href="/" title="Home")
             %img#logo(src="/images/logo.svg")
         %nav.sidebar
           %strong.sidebar--header Getting started
-          -order_glob("pages/getting-started/*.html*").each do |r|
+          -order_glob("getting-started/*.html*").each do |r|
             =link_to_if_current r.data["title"], r
           %strong.sidebar--header Documentation
-          -order_glob("pages/basics/*.html*").each do |r|
+          -order_glob("basics/*.html*").each do |r|
             =link_to_if_current r.data["title"], r
           %strong.sidebar--header Project
-          -order_glob("pages/project/*.html*").each do |r|
+          -order_glob("project/*.html*").each do |r|
             =link_to_if_current r.data["title"], r
       %section.layout--content.content
         %h1=current_page.data["title"]

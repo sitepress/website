@@ -1,6 +1,5 @@
 ---
 title: Sitepress
-layout: layouts/layout.html.haml
 ---
 
 Build amazing content websites in any Ruby web framework including Rails, Sinatra, or even a static site.
@@ -19,6 +18,6 @@ Sitepress is the missing piece. It has all the powerful features you'd expect fr
 
 Pick where you will be using Sitepress to get started:
 
-* [Embed Sitepress in Rails](/getting-started/rails.html)
-* [Embed Sitepress in Rack](/getting-started/rack.html)
-* [Get started with a static site](/getting-started/static.html)
+* [Embed Sitepress in Rails](/getting-started/rails)
+* [Embed Sitepress in Rack](/getting-started/rack)
+* [Get started with a static site](/getting-started/static)

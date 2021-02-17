@@ -1,4 +1,4 @@
-module PageCollectionHelpers
+module PageCollectionHelper
   def order_pages(pages)
     pages.sort_by { |r| r.data.fetch("order", Float::INFINITY) }
   end
