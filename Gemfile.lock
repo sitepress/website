@@ -1,25 +1,27 @@
 GIT
   remote: https://github.com/sitepress/sitepress
-  revision: c09a84806a1341a3f096becc956d825f13dff942
+  revision: c3f1021bc07bc4bd27c76d5fcd7a4f93a99ba26f
   branch: rails-compiler
   specs:
     sitepress (1.0.1)
       sitepress-cli (= 1.0.1)
     sitepress-cli (1.0.1)
-      rack (>= 1.0)
+      rack (>= 1.0.0)
       sitepress-server (= 1.0.1)
-      thor (~> 1.0.0)
+      thor (>= 1.0.0)
     sitepress-core (1.0.1)
       mime-types (>= 2.99)
     sitepress-rails (1.0.1)
-      sitepress-core (= 1.0.1)
-    sitepress-server (1.0.1)
       actionpack (>= 5.0)
-      actionview (>= 5.0)
-      activemodel (>= 5.0)
-      activesupport (>= 5.0)
       railties (>= 5.0)
+      sitepress-core (= 1.0.1)
+      sprockets-rails (>= 2.0.0)
+    sitepress-server (1.0.1)
+      haml-rails
+      markdown-rails
+      sass-rails
       sitepress-rails (= 1.0.1)
+      webrick
 
 GEM
   remote: https://rubygems.org/
@@ -186,6 +188,7 @@ GEM
     tilt (2.0.10)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    webrick (1.7.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)

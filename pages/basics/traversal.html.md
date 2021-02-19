@@ -24,9 +24,9 @@ Its possible to navigate pages via:
 site = Sitepress::Site.new(root_path: "/my/site")
 book = site.resources.get("books/html-for-newbs.html")
 book.parents      # All parents nodes (books, root)
-book.siblings     # All siblings, excluding self (js-for-nebs)
+book.siblings     # All siblings
 book.parent       # This would return nil since the `book` node doesn't have a page.
-book.chidlren     # Returns all of the chapters in `html-for-newbs` (chatper-1 .. chapter-3)
+book.children     # Returns all of the chapters in `html-for-newbs` (chatper-1 .. chapter-3)
 ```
 
 Traversing the site hierachy is very useful for building site navigation components.
