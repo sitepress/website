@@ -3,13 +3,13 @@
   %head
     %meta(charset="utf-8")
     %title==#{current_page.data["title"]} | Sitepress
-    %link(href="/stylesheets/site.css" type="text/css" rel="stylesheet")
+    = stylesheet_link_tag "site"
   %body.layout
     .layout--body
       .layout--sidebar.accented-sidebar
         .layout--sidebar--logo
           %a(href="/" title="Home")
-            %img#logo(src="/images/logo.svg")
+            =image_tag "logo.svg", id: "logo"
         %nav.sidebar
           %strong.sidebar--header Getting started
           -order_glob("getting-started/*.html*").each do |r|

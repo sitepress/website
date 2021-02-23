@@ -1,26 +1,26 @@
 GIT
   remote: https://github.com/sitepress/sitepress
-  revision: c3f1021bc07bc4bd27c76d5fcd7a4f93a99ba26f
-  branch: rails-compiler
+  revision: 2059e0f440a831ad3aa56b006d8107b06fa080c6
+  branch: version-2
   specs:
-    sitepress (1.0.1)
-      sitepress-cli (= 1.0.1)
-    sitepress-cli (1.0.1)
+    sitepress (2.0.0.beta2)
+      sitepress-cli (= 2.0.0.beta2)
+    sitepress-cli (2.0.0.beta2)
       rack (>= 1.0.0)
-      sitepress-server (= 1.0.1)
+      sitepress-server (= 2.0.0.beta2)
       thor (>= 1.0.0)
-    sitepress-core (1.0.1)
+    sitepress-core (2.0.0.beta2)
       mime-types (>= 2.99)
-    sitepress-rails (1.0.1)
+    sitepress-rails (2.0.0.beta2)
       actionpack (>= 5.0)
       railties (>= 5.0)
-      sitepress-core (= 1.0.1)
+      sitepress-core (= 2.0.0.beta2)
       sprockets-rails (>= 2.0.0)
-    sitepress-server (1.0.1)
+    sitepress-server (2.0.0.beta2)
       haml-rails
       markdown-rails
       sass-rails
-      sitepress-rails (= 1.0.1)
+      sitepress-rails (= 2.0.0.beta2)
       webrick
 
 GEM
