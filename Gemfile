@@ -13,4 +13,3 @@ end
 gem "haml-rails"
 gem "sass-rails"
 gem "markdown-rails"
-gem "rdiscount"
