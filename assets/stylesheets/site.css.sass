@@ -9,6 +9,14 @@ $accent-color: hsl(23,39%,26%)
 $light-accent-color: mix($white, $accent-color, 95%)
 $light-border-color: mix($white, $accent-color, 85%)
 
+@mixin dark
+  @media(prefers-color-scheme: dark)
+    @content
+
+@mixin mobile
+  @media screen and (max-width: 36rem)
+    @content
+
 body
   line-height: $line-height
   font-size: $base-font-size
@@ -16,14 +24,14 @@ body
   font-family: -apple-system, sans-serif
   background: $white
   color: $black
-  @media(prefers-color-scheme: dark)
+  @include dark
     background: darken($accent-color, 10%)
     color: mix($accent-color, $white, 10%)
 
 .content
   h1,h2,h3,h4,h5,h6
     color: $accent-color
-    @media(prefers-color-scheme: dark)
+    @include dark
       color: $white
   h1
     font-size: 2rem
@@ -42,7 +50,7 @@ body
     background: $light-accent-color
     padding: 1rem
     overflow: auto
-    @media(prefers-color-scheme: dark)
+    @include dark
       background: darken($accent-color, 15%)
       color: mix($accent-color, $light-accent-color, 25%)
   code
@@ -51,11 +59,11 @@ body
     line-height: 1rem
   p > code
     padding: 0.05rem
-    @media(prefers-color-scheme: dark)
+    @include dark
       color: mix($accent-color, $light-accent-color, 10%)
   a
     color: $accent-color
-    @media(prefers-color-scheme: dark)
+    @include dark
       color: mix($accent-color, $light-accent-color, 10%)
 .layout
   display: flex
@@ -69,9 +77,13 @@ body
   &--body
     display: flex
     flex-direction: row
+    @include mobile
+      flex-direction: column-reverse
   &--sidebar
     min-height: 100vh
     min-width: $sidebar-width
+    display: flex
+    flex-direction: column
     padding: $spacing
     &--logo
       display: flex
@@ -79,6 +91,7 @@ body
   &--content
     flex: 1
     padding: $spacing
+    min-height: 75vh
 
 .accented-sidebar
   background: $accent-color
@@ -94,6 +107,6 @@ body
     text-decoration: none
     &.active
       color: $white
-img#logo
+img.logo
   max-width: 100%
   height: $sidebar-width

@@ -7,10 +7,9 @@
   %body.layout
     .layout--body
       .layout--sidebar.accented-sidebar
-        .layout--sidebar--logo
-          %a(href="/" title="Home")
-            =image_tag "logo.svg", id: "logo"
-        %nav.sidebar
+        =link_to "/", class: "layout--sidebar--logo" do
+          =image_tag "logo.svg", class: "logo"
+        %nav.sidebar.layout--sidebar--menu
           %strong.sidebar--header Getting started
           -order_glob("getting-started/*.html*").each do |r|
             =link_to_if_current r.data["title"], r
