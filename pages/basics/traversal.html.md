@@ -3,7 +3,7 @@ title: Traversal
 order: 3
 ---
 
-Sitepress pages are organized as a hierarchical tree. For example, given the site directory:
+Sitepress pages are organized in a hierarchical tree. For example, given a site directory organized like this:
 
 ```
 ├── helpers
@@ -18,7 +18,7 @@ Sitepress pages are organized as a hierarchical tree. For example, given the sit
           └── chapter-3.html.haml
 ```
 
-Its possible to navigate pages via:
+...it is possible to navigate pages via:
 
 ```ruby
 site = Sitepress::Site.new(root_path: "/my/site")
@@ -29,11 +29,11 @@ book.parent       # This would return nil since the `book` node doesn't have a p
 book.children     # Returns all of the chapters in `html-for-newbs` (chatper-1 .. chapter-3)
 ```
 
-Traversing the site hierachy is very useful for building site navigation components.
+The ability to traverse the site hierarchy is particularly useful when building site navigation components.
 
 ## Resource manipulation
 
-What if you want to programmatically manipulate your resources? For example, maybe you want to set the layout for the `youtube_pages` to `video`. The Site's `manipulate` function makes that possible:
+What if you want to programmatically manipulate your resources? For example, you might want to set the layout for all pages shown under the url `youtube/` to `video`. With Site's `manipulate` function, this is easy:
 
 ```ruby
 site = Sitepress::Site.new(root_path: "/my/site")
@@ -42,9 +42,9 @@ site.manipulate do |resource|
 end
 ```
 
-When the `site.resources` method is called the rules from `manipulate` are applied.
+When the `site.resources` method is called, the rules from `manipulate` are applied.
 
-If you want to add or remove resources from the manipulate method, just add the second `resources` argument to the `manipulate` block:
+If you want to add or remove resources from the manipulate method, you can simply add a second `resources` argument to the `manipulate` block:
 
 ```ruby
 site = Sitepress::Site.new(root_path: "/my/site")

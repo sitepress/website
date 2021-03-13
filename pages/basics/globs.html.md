@@ -3,7 +3,7 @@ title: Globs
 order: 2
 ---
 
-A very common use of Sitepress is to get all of the pages within a specific directory. For example, if a site has the following pages in the `/video` directory:
+A common use of Sitepress is to get all of the pages within a specific directory. For example, if a site has the following pages in the `/videos` directory:
 
 ```
 ├── helpers
@@ -24,7 +24,7 @@ site = Sitepress::Site.new(root_path: "/my/site")
 video_pages = site.resources.glob("videos/*html*")
 ```
 
-Pages are just plain old Ruby objects. If you need to query or filter a collection you'd just:
+Pages are just plain old Ruby objects. If you need to query or filter a collection, you can just use:
 
 ```ruby
 site = Sitepress::Site.new(root_path: "/my/site")
@@ -33,7 +33,7 @@ youtube_pages = site.resources.glob("videos/*html*").select do |r|
 end
 ```
 
-The `videos.html.haml` template could render HTML that links to the videos in the list:
+The `videos.html.haml` template would render `HTML` that links to the videos in the list:
 
 ```haml
 %html
@@ -46,4 +46,4 @@ The `videos.html.haml` template could render HTML that links to the videos in th
           %a{href: page.request_path}=page.data.fetch("title")
 ```
 
-Refer to the Ruby [Dir#glob](https://ruby-doc.org/core-2.2.0/Dir.html#method-c-glob) documentation for the patterns you may use to glob resources.
+Refer to the Ruby [Dir#glob](https://ruby-doc.org/core-2.2.0/Dir.html#method-c-glob) documentation for patterns you may use to glob resources.

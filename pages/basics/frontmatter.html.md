@@ -3,7 +3,7 @@ title: Metadata
 order: 5
 ---
 
-Frontmatter is a way to add meta data to your pages and access it form templates and the sitemap. Consider the following page:
+Frontmatter is a way to add metadata to your pages and access it from templates and the sitemap. Consider the following page:
 
 ```md
 ----
@@ -28,7 +28,7 @@ With a respective `video.html.haml` layout:
     %p=yield
 ```
 
-The power of Frontmatter is its abililty to query the data programatically from other templates. For example, if we have several video pages in our site, we could query them via the Site:
+The power of Frontmatter is its abililty to query data programatically from other templates. For example, if we have several video pages on our site, we can query them via the Site:
 
 ```haml
 ---

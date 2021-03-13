@@ -3,7 +3,7 @@ title: Rack
 order: 2
 ---
 
-Sitepress ships with a Rack app that's great for embedding Sitepress sites into any Rack app or deploy to Heroku.
+Out of the box, Sitepress can be easily embedded into any Rack app. It can even be deployed direclty to Heroku.
 
 First, install the `sitepress-server` gem.
 
@@ -26,13 +26,13 @@ site = Sitepress::Site.new(root_path: "content")
 run Sitepress::Server.new(site: site)
 ```
 
-Then create a content folder that will hold all of your pages:
+Then create a `content/` folder to hold all of your pages:
 
 ```bash
 $ mkdir -f content/pages
 ```
 
-And finally add a page to the pages directory:
+Finally, add a page to the pages directory:
 
 ```bash
 $ echo "<h1>Hello</h1><p>It is <%= Time.now %> o'clock</p>" > content/pages/index.html.erb
@@ -44,6 +44,6 @@ Then boot the server:
 $ bundle exec rackup config.ru
 ```
 
-Now open `https://127.0.0.1:9292/index.html` to view the page!
+Now open `https://127.0.0.1:9292/index.html` to view the page.
 
 Next, read about working with [Frontmatter page metadata](/basics/frontmatter).
