@@ -2,22 +2,22 @@
 title: Goals
 ---
 
-Sitepress aims to be a fast, embeddable website manager that can be used both in dynamic applications, like a Rails app, or as a stand-alone static site generator.
+Sitepress is a fast, embeddable website manager that can be used in both dynamic applications, like a Rails app, or as a stand-alone static site generator.
 
-* **Embeddable** - Sitepress ships with as [few dependencies as possible](https://github.com/sitepress/sitepress/blob/master/sitepress/sitepress.gemspec#L24) so that it may be embedded in other web frameworks, like rails, without creating rubygem conflicts. It can also be used as a static site generator, as a rack app, etc.
+* **Embeddable** - Sitepress ships with as [few dependencies as possible](https://github.com/sitepress/sitepress/blob/master/sitepress/sitepress.gemspec#L24) so that it can be embedded in other web frameworks, like Rails, without creating conflicts. It can also be used as a standalone static site generator, as a Rack app, or in other contexts.
 
-* **Composable** - Sitepress is broken apart into several gems that are optimized for their environments. For example, the `sitepress-rails` gem uses as much of the rendering infrastructure from Rails as possible.
+* **Composable** - Sitepress is broken into several gems that are optimized for specific environments. For example, the `sitepress-rails` gem uses as much of the rendering infrastructure from Rails as possible.
 
-* **Speed** - Sitepress is benchmarked using a 10,000 page site as part of a regular test suite. Performance and speed is a goal of this project. The philosophy of performance is "less is more"; or the less code needed for Sitepress, the less chances for it to be slow.
+* **Speed** - High performance is a primary goal of Sitepress. It is benchmarked using a 10,000 page site as part of its regular test suite. The general philosophy of the project is "less is more" -- that is, the less code needed for Sitepress, the the better.
 
-More immediate features and milestones may be found on [Github](https://github.com/sitepress/sitepress/projects).
+More immediate features and milestones can be found on [Github](https://github.com/sitepress/sitepress/projects).
 
 ## Non-goals
 
-More important than goals are non-goals, or what Sitepress is not setting out to accomplish. Most of these non-goals are temporary because doing them all could spread the project too thin:
+More important than goals are non-goals, or what Sitepress is not setting out to accomplish. Most of these non-goals are temporary because achieving them all could spread the project too thin:
 
-* **Become a kitchen sink** - The premise of building Sitepress was to have minimal dependencies so that it could be embedded in other frameworks, like Rails, Sinatra, or Rack, so that upgrading those respective frameworks wouldn't become a headache. Middleman ships with an ActiveSupport dependency that makes upgrading Rails really difficult. Jekyll ships with less dependencies, but includes many that would be unnecessary for the goals Sitepress aims to solve. When Sitepress ships with a static site compiler, its possible that will have a heavy set of dependencies, but the core Sitepress gem will always aim to be lightweight and embeddable.
+* **Become a kitchen sink** - One of the main goals of Sitepress was to have minimal dependencies so that it could be easily embedded into other frameworks, like Rails, Sinatra, and Rack. It should be unaffected when upgrading those respective frameworks. Middleman ships with an ActiveSupport dependency that makes upgrading Rails difficult; Jekyll ships with fewer dependencies, but still includes many that are unnecessary for Sitepress to achieve its goals.
 
-* **Stable API before 1.0** - Sitepress is being actively developed on a public Rails web application that receives approximately 2 million visitors per month. The internal API has settled down enough where its usable by a content and development team without drastic changes, but there's still a pretty good chance things will change and break as more requirements unfold. The [Ruby Gems sitepress page](https://rubygems.org/gems/sitepress) has the official version of Sitepress.
+* **Stable API before 1.0** - Sitepress is being actively developed on a public Rails web application that receives approximately 2 million visitors per month. The internal API has settled down enough for it to be usable by a content and development team without drastic changes, but there is still a pretty good chance that things will change and break as more requirements unfold. The [Ruby Gems Sitepress page](https://rubygems.org/gems/sitepress) has the official version of Sitepress.
 
-* **Easy to use by beginners** - In its current form, Sitepress is likely to be used by people who need to embed a marketing website in their Rails or Sinatra application that can't deploy a separate static marketing website. Its assumed that beginners won't run into this constraint and that they would be better suited by tools like [Middleman](https://www.middlemanapp.com/). Longer term, Sitepress will ship with a Rails CLI integration and a stand-alone CLI that will make creating new Sitepress projects easier for beginners.
+* **Easy to use for beginners** - In its current form, Sitepress is likely to be used by people who need to embed an integrated marketing website inside their Rails or Sinatra application. It is assumed that beginners won't run into this constraint and that they would be better suited by tools like [Middleman](https://www.middlemanapp.com/), which can deploy separately. Longer term, Sitepress will ship with a Rails CLI integration and a stand-alone CLI that will make creating new Sitepress projects easier for beginners.

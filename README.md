@@ -1,3 +1,3 @@
 # Sitepress documentation and project website
 
-Documentation for the official website for [Sitepress](https://sitepress.cc).
+The official Sitepress website, including documentation for the Sitepress project: [Sitepress](https://sitepress.cc)
