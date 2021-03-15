@@ -53,4 +53,4 @@ site.manipulate do |resource, root|
 end
 ```
 
-Next, read about working with [Frontmatter page metadata](/basics/frontmatter.html).
+Next, read about working with [Frontmatter page metadata](/basics/frontmatter).
