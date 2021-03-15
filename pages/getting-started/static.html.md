@@ -27,4 +27,4 @@ Then fire up the preview server:
 $ sitepress server
 ```
 
-Your site will now be available at [http://127.0.0.1:8080/index.html](http://127.0.0.1:8080/index.html)
+Your site will now be available at `http://127.0.0.1:8080/`
