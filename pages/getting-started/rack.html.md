@@ -44,6 +44,6 @@ Then boot the server:
 $ bundle exec rackup config.ru
 ```
 
-Now open `https://127.0.0.1:9292/index.html` to view the page.
+Now open `https://127.0.0.1:9292/` to view the page.
 
 Next, read about working with [Frontmatter page metadata](/basics/frontmatter).
