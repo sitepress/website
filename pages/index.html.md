@@ -8,10 +8,10 @@ Sitepress comes with all your favorite templating languages, like ERB and HAML, 
 
 ## Getting started
 
-To get started with the Sitepress pre-release, run:
+To get started with the Sitepress, run:
 
 ```
-gem install sitepress --pre
+gem install sitepress
 sitepress new my-website
 cd my-website
 sitepress server
