@@ -1,23 +1,23 @@
 GIT
   remote: https://github.com/sitepress/sitepress
-  revision: 0d8e7df2caac9a7487a1c755895e4e1cb0f479de
-  branch: main
+  revision: 807848812d40455302b5e53abf2a1321692831ca
+  branch: version-2
   specs:
-    sitepress (3.0.0)
-      sitepress-cli (= 3.0.0)
-    sitepress-cli (3.0.0)
+    sitepress (2.0.0.beta8)
+      sitepress-cli (= 2.0.0.beta8)
+    sitepress-cli (2.0.0.beta8)
       rack (>= 1.0.0)
-      sitepress-server (= 3.0.0)
+      sitepress-server (= 2.0.0.beta8)
       thor (>= 1.0.0)
-    sitepress-core (3.0.0)
+    sitepress-core (2.0.0.beta8)
       mime-types (>= 2.99)
-    sitepress-rails (3.0.0)
+    sitepress-rails (2.0.0.beta8)
       actionpack (>= 6.0)
       railties (>= 6.0)
-      sitepress-core (= 3.0.0)
+      sitepress-core (= 2.0.0.beta8)
       sprockets-rails (>= 2.0.0)
-    sitepress-server (3.0.0)
-      sitepress-rails (= 3.0.0)
+    sitepress-server (2.0.0.beta8)
+      sitepress-rails (= 2.0.0.beta8)
 
 GEM
   remote: https://rubygems.org/
