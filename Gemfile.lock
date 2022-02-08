@@ -1,23 +1,23 @@
 GIT
   remote: https://github.com/sitepress/sitepress
-  revision: 807848812d40455302b5e53abf2a1321692831ca
-  branch: version-2
+  revision: 0d8e7df2caac9a7487a1c755895e4e1cb0f479de
+  branch: main
   specs:
-    sitepress (2.0.0.beta8)
-      sitepress-cli (= 2.0.0.beta8)
-    sitepress-cli (2.0.0.beta8)
+    sitepress (3.0.0)
+      sitepress-cli (= 3.0.0)
+    sitepress-cli (3.0.0)
       rack (>= 1.0.0)
-      sitepress-server (= 2.0.0.beta8)
+      sitepress-server (= 3.0.0)
       thor (>= 1.0.0)
-    sitepress-core (2.0.0.beta8)
+    sitepress-core (3.0.0)
       mime-types (>= 2.99)
-    sitepress-rails (2.0.0.beta8)
+    sitepress-rails (3.0.0)
       actionpack (>= 6.0)
       railties (>= 6.0)
-      sitepress-core (= 2.0.0.beta8)
+      sitepress-core (= 3.0.0)
       sprockets-rails (>= 2.0.0)
-    sitepress-server (2.0.0.beta8)
-      sitepress-rails (= 2.0.0.beta8)
+    sitepress-server (3.0.0)
+      sitepress-rails (= 3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -116,9 +116,9 @@ GEM
       rails
       rdiscount (>= 1.6.8)
     method_source (1.0.0)
-    mime-types (3.3.1)
+    mime-types (3.4.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.0225)
+    mime-types-data (3.2022.0105)
     mimemagic (0.3.5)
     mini_mime (1.0.2)
     mini_portile2 (2.5.0)
