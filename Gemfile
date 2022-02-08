@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "rails", "~> 6.1.0"
+
 if sitepress_gem_path = ENV["SITEPRESS_GEM_PATH"]
   gem "sitepress", path: sitepress_gem_path
   gem "sitepress-cli", path: sitepress_gem_path
