@@ -1,5 +1,6 @@
 ---
-title: Page Models
+title: Models
+order: 5
 ---
 
 Page Models are a powerful way to manage sets of pages and access their content programatically from all other parts of the website. For example, if a small dental practice wants to list their locations on a website, they might create the following pages in `./pages/people`.
@@ -13,10 +14,11 @@ title: Open Source Developer
 email: brad@example.com
 ---
 
-I like Open Source software.
+I created Sitepress!
 ```
 
-Then we add another person at `./pages/people/linux.html.md`:
+Then we add another person at `./pages/people/linus.html.md`:
+
 ```md
 ---
 name: Linus Torvalds
@@ -56,3 +58,5 @@ Finally, from any template on the website, the collection of people can be itera
   </div>
 <% end %>
 ```
+
+Treating pages, and their respeective frontmatter, is a powerful way to combine content within applications. For example, a set of pages could be created for each feature of an application, each plan a SaaS product offers, or even support articles.

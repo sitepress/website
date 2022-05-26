@@ -1,6 +1,6 @@
 ---
 title: Metadata
-order: 5
+order: 4
 ---
 
 Frontmatter is a way to add metadata to your pages and access it from templates and the sitemap. Consider the following page:
