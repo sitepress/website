@@ -11,7 +11,19 @@ Add `sitepress-rails` to a Rails application by running:
 bundle add sitepress-rails
 ```
 
-Create the `app/content/pages` in a rails project:
+Then run:
+
+```ruby
+bin/rails generate sitepress:install
+```
+
+Restart the Rails application server and point your browser to `http://127.0.0.1:3000/` and if all went well you should see a page created by Sitepress with next steps.
+
+The `sitepress:install` command configures the root route of your Rails application to point at `app/content/index.html.erb`. If that's not desired, open the `config/routes.rb` file and delete the `sitepress_root` line.
+
+## Manual setup
+
+Create the `app/content/pages` directory in a rails project:
 
 ```bash
 $ mkdir -p app/content/pages

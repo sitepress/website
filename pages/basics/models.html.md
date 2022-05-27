@@ -59,4 +59,4 @@ Finally, from any template on the website, the collection of people can be itera
 <% end %>
 ```
 
-Treating pages, and their respeective frontmatter, is a powerful way to combine content within applications. For example, a set of pages could be created for each feature of an application, each plan a SaaS product offers, or even support articles.
+Treating pages, and their respective frontmatter, is a powerful way to combine content within applications. For example, a set of pages could be created for each feature of an application, each plan a SaaS product offers, or even support articles.
