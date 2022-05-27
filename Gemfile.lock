@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sitepress/sitepress
-  revision: 80a3af1d3811fc380a6b65eddf8a29dde6905f6d
+  revision: 6d27579a9da43bbdccf2286401ae65fd4b6239a8
   branch: main
   specs:
     sitepress (3.0.1)
@@ -144,6 +144,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.6-x86_64-linux)
+      racc (~> 1.4)
     racc (1.6.0)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -211,6 +213,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   haml-rails
