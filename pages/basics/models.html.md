@@ -3,7 +3,7 @@ title: Models
 order: 5
 ---
 
-Page Models are a powerful way to manage sets of pages and access their content programatically from all other parts of the website. For example, if a small dental practice wants to list their locations on a website, they might create the following pages in `./pages/people`.
+Page Models are a powerful way to manage sets of pages and access their content programmatically from all other parts of the website. For example, if a website wants to feature pages for each member of their team, they might create the following pages in `./pages/people`.
 
 The first page we'd create lives at `./pages/people/brad.html.md`:
 
@@ -59,4 +59,4 @@ Finally, from any template on the website, the collection of people can be itera
 <% end %>
 ```
 
-Treating pages, and their respective frontmatter, is a powerful way to combine content within applications. For example, a set of pages could be created for each feature of an application, each plan a SaaS product offers, or even support articles.
+Page Models are a powerful and convenient way to access collections of content on websites.

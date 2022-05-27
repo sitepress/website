@@ -1,6 +1,6 @@
 ---
 title: Rack
-order: 2
+order: 3
 ---
 
 Out of the box, Sitepress can be easily embedded into any Rack app. It can even be deployed direclty to Heroku.
