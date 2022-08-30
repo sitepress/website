@@ -1,5 +1,6 @@
 ---
 title: Source code
+subtitle: Contribute to the Sitepress project
 ---
 
 Sitepress is an open source project. Collaboration primarly happens on [Github](https://github.com/sitepress) in the following repos:

@@ -1,25 +1,26 @@
 ---
 title: Rails
+subtitle: Frontmatter, site traversal, & site generator features in Rails
 order: 1
 ---
 
-Sitepress was originally designed to be embedded inside Rails. To get started, add this line to your application's Gemfile:
-
-Add `sitepress-rails` to a Rails application by running:
+Sitepress was originally designed to be embedded inside Rails. To get started, add `sitepress-rails` to your Rails application.
 
 ```ruby
 bundle add sitepress-rails
 ```
 
-Then run:
+Then install it.
 
 ```ruby
 bin/rails generate sitepress:install
 ```
 
-Restart the Rails application server and point your browser to `http://127.0.0.1:3000/` and if all went well you should see a page created by Sitepress with next steps.
+Restart the Rails application server and point your browser to `http://127.0.0.1:3000/`. If all went well you should see a page created by Sitepress with next steps.
 
 The `sitepress:install` command configures the root route of your Rails application to point at `app/content/index.html.erb`. If that's not desired, open the `config/routes.rb` file and delete the `sitepress_root` line.
+
+If you don't see content, the manual setup will help you troubleshoot your way to victory.
 
 ## Manual setup
 

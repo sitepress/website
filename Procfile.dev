@@ -1,0 +1,2 @@
+web: bundle exec sitepress server
+tailwind: npx tailwindcss -i ./assets/stylesheets/site.css -o ./assets/stylesheets/tailwind.css --watch

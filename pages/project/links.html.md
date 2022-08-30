@@ -1,5 +1,6 @@
 ---
 title: Links
+subtitle: Additional resources related to Sitepress
 ---
 
 Various links related to the Sitepress project.

@@ -1,5 +1,6 @@
 ---
 title: Models
+subtitle: Wrap pages in custom Ruby classes and treat them as objects
 order: 5
 ---
 
@@ -46,7 +47,7 @@ end
 
 Finally, from any template on the website, the collection of people can be iterated by calling:
 
-```erb
+```html
 <h1>People</h1>
 
 <% PersonPage.all.each do |person| %>

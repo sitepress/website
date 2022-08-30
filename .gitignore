@@ -1,3 +1,4 @@
 .sass-cache
 build
 .ruby-version
+node_modules

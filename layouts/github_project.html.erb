@@ -1,0 +1,6 @@
+<%= render_layout "layout" do %>
+  <%= yield %>
+  <div class="prose prose-sm p-8 mx-4 my-8 rounded border backdrop-brightness-95">
+    <%= render_github_readme current_page.data.fetch("github_url") %>
+  </div>
+<% end %>

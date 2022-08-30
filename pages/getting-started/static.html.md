@@ -1,5 +1,6 @@
 ---
 title: Static
+subtitle: Compile templates, partials, and pages into static HTML, CSS, & JavaScript files
 order: 2
 ---
 

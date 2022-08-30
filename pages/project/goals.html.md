@@ -1,8 +1,9 @@
 ---
 title: Goals
+subtitle: The context, intent, and philospophy of Sitepress
 ---
 
-Sitepress is a fast, embeddable website manager that can be used in both dynamic applications, like a Rails app, or as a stand-alone static site generator.
+Sitepress is a fast, embeddable website manager that can be used in both dynamic applications, like a Rails app or server-side rendered website, or as a stand-alone static site generator.
 
 * **Embeddable** - Sitepress ships with as [few dependencies as possible](https://github.com/sitepress/sitepress/blob/master/sitepress/sitepress.gemspec#L24) so that it can be embedded in other web frameworks, like Rails, without creating conflicts. It can also be used as a standalone static site generator, as a Rack app, or in other contexts.
 

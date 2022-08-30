@@ -1,0 +1,12 @@
+doctype xml UTF-8
+rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+  channel
+    title=current_page.data.fetch("title")
+    link=current_page.url
+    description=yield
+    atom:link href=request.url rel="self" type="application/rss+xml"
+    - site.glob(current_page.data.fetch("glob")).each do |page|
+      item
+       title=page.data.fetch("title")
+       link=page.request_path
+       guid=url_for page.request_path

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html class="dark:text-slate-200 dark:bg-brown-900">
+  <head>
+    <meta charset=utf-8>
+    <meta name = "viewport" content = "width = device-width">
+    <title><%= current_page.data.fetch("title") %></title>
+    <%= stylesheet_link_tag "tailwind" %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>

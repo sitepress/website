@@ -1,0 +1,8 @@
+<ul>
+  <li class="font-bold text-lg whitespace-nowrap text-brown-900 dark:text-white"><%= title %></li>
+  <ul>
+    <% order_glob(glob).each do |r| %>
+      <li><%= link_to_if_current r.data["title"], r, class: "text-brown-900 dark:text-brown-200", active_class: "font-bold text-black dark:text-white" %></li>
+    <% end %>
+  </ul>
+</ul>

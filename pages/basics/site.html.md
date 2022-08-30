@@ -1,5 +1,6 @@
 ---
 title: Site
+subtitle: Directory & file structure of a Sitepress project
 order: 1
 ---
 

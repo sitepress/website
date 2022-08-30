@@ -1,5 +1,6 @@
 ---
 title: Globs
+subtitle: Query pages for on your file system for building collections & navigation
 order: 2
 ---
 

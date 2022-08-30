@@ -1,0 +1,77 @@
+---
+title: Sitepress
+subtitle: Build amazing websites
+layout: body
+---
+
+.flex.flex-col.gap-y-20.my-20.px-4
+  .flex.flex-col.max-w-5xl.gap-y-10.py-10.justify-center.items-center.text-center.mx-auto
+    .logo
+      =image_tag "logo-brown.svg", class: "max-w-[16rem] block dark:hidden"
+      =image_tag "logo-white.svg", class: "max-w-[16rem] hidden dark:block"
+    h1.text-6xl.font-extrabold.text-black.dark:text-white Build ambitious websites
+    p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Sitepress is a site generator built on top of Rails, which means you can embed it in a Rails app or run it stand-alone for static or server-side rendered websites.
+
+    .my-4.flex.flex-col.md:flex-row.gap-x-4.font-semibold.gap-y-6.justify-center.items-center
+      .font-bold.animate-pulse.hidden.md:inline-block Get started →
+      =link_to "Embed in a Rails App", "/getting-started/rails", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
+      =link_to "Build Stand-Alone Website", "/getting-started/static", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
+  hr
+
+  .flex.flex-col.min-w-full.gap-y-16.justify-center.items-center.py-12
+    h2.text-5xl.font-extrabold.font-slate-100.mb-12 Why Sitepress?
+    .prose.prose-lg.dark:prose-invert.max-w-3xl
+      markdown:
+        Static site generators are great frameworks for compiling static websites and publishing them to the web, but they force you to choose between running them completely static or inside of a Rails application. Sitepress lets you do both!
+
+        Database-backed Rails content management systems like [Refinery CMS](http://www.refinerycms.com) and [Radiant CMS](http://radiantcms.org) are difficult to sync between development, test, staging, and production environments, making them difficult to use in multi-stage development or test-driven development workflows.
+
+        Projects like [High Voltage](https://github.com/thoughtbot/high_voltage) make it possible to embed a small, basic site into Rails, but they lack powerful features like Frontmatter and Sitemap APIs required to make building non-trivial content sites possible. It also doesn't ship with a static site compiler.
+
+        Sitepress is the missing piece. It has all the powerful features you'd expect from a fully featured static site generator, like Frontmatter support and hierarchal page traversal, but it's capable of being embedded inside any Rails, Sinatra, or Rack app. Since all of the content is just a bunch of files, its easy to incorporate Sitepress into a multi-stage or test-driven work environment.
+
+        If you're a soloprenuer building Rails applications, you'll love how easy it is to build content websites in your Rails app, which means you can spend more time shipping and less time worrying about your content management system.
+
+  hr
+
+  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl
+    hgroup.text-center.flex.flex-col.gap-y-2.mb-12
+      h2.text-5xl.font-extrabold All the features you need
+      h3.text-3xl Sitepress is packed with goodies that make building websites fun & productive
+
+    .grid.gap-16.md:grid-cols-2
+      =link_to page_path("basics/frontmatter"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Frontmatter
+        p Add metadata to the top of your content pages that you can plug into your templates, collections, and more.
+
+      =link_to page_path("basics/globs"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Globbing
+        p Build collections and navigations intuitively from your file system using everything you know and love about <code>Dir#glob</code>.
+
+      =link_to page_path("basics/models"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Page models
+        p Treat pages as data for even more powerful ways of traversing your sites content for navigation, grids, or collections.
+
+      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Layouts, partials, & pages
+        p Since Sitepress is built on top of Rails, developers will feel right at home rendering pages, layouts, & partials.
+
+      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Templating languages
+        p Erb, Markdown, Slim, HAML. Everything that works with Rails will work with Sitepress, and that's a lot of stuff.
+
+      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl So many view helpers
+        p All the view helpers you love in Rails are stock in Sitepress. From <code>time_ago_in_words</code> to <code>pluralize</code>.
+
+  hr
+
+  .flex.flex-col.min-w-full.gap-y-8.justify-center.items-center
+    hgroup.text-center.flex.flex-col.gap-y-2
+      h2.text-5xl.font-bold Get started
+      h3.text-2xl Setup takes just a few minutes regardless of your choice
+    .my-4.flex.flex-col.md:flex-row.gap-x-4.font-semibold.gap-y-6.justify-center.items-center.text-center
+      =link_to "Embed in a Rails App", "/getting-started/rails", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
+      =link_to "Build Stand-Alone Website", "/getting-started/static", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
+
+

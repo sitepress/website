@@ -1,0 +1,26 @@
+<%= render_layout "body" do %>
+  <main class="grid grid-cols-1 gap-y-16 md:gap-y-24 py-16 md:py-24 px-4 md:px-16 md:gap-x-16 md:grid-cols-[max-content_minmax(0,_1fr)]">
+    <header class="md:col-start-2 order-1 md:order-1">
+      <h1 class="text-5xl font-extrabold text-brown-900 dark:text-white"><%= current_page.data["title"] %></h1>
+      <% if subtitle = current_page.data["subtitle"] %>
+        <h2 class="text-2xl opacity-50"><%= subtitle %></h2>
+      <% end %>
+    </header>
+    <article class="prose dark:prose-invert max-w-fit order-2 md:order-3">
+      <%= yield %>
+    </article>
+    <nav class="order-3 md:order-2">
+      <div class="md:top-16 md:sticky flex flex-col space-y-8">
+        <%= partial "partials/menu", title: "Getting Started", glob: "getting-started/*.html*" %>
+        <%= partial "partials/menu", title: "Documentation", glob: "basics/*.html*" %>
+        <%= partial "partials/menu", title: "Project", glob: "project/*.html*" %>
+      </div>
+    </nav>
+    <aside class="order-5 md:order-4 z-50">
+      <%= link_to "/" do %>
+        <%= image_tag "logo-brown.svg", class: "max-w-[8rem] block dark:hidden" %>
+        <%= image_tag "logo-white.svg", class: "max-w-[8rem] hidden dark:block" %>
+      <% end %>
+    </footer>
+  </main>
+<% end %>

@@ -1,5 +1,6 @@
 ---
 title: Traversal
+subtitle: Navigate the tree structure of a Sitepress website & page
 order: 3
 ---
 

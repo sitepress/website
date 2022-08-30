@@ -1,5 +1,6 @@
 ---
-title: Metadata
+title: Frontmatter
+subtitle: Add metadata to the top of your pages
 order: 4
 ---
 
