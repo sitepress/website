@@ -1,21 +1,24 @@
 ---
 title: Sitepress
-subtitle: Build amazing websites
+subtitle: Build ambitious content websites in Rails
 layout: body
 ---
 
-.flex.flex-col.gap-y-20.my-20.px-4
-  .flex.flex-col.max-w-5xl.gap-y-10.py-10.justify-center.items-center.text-center.mx-auto
+.flex.flex-col.gap-y-16.my-16.px-4
+  .flex.flex-col.max-w-4xl.gap-y-16.justify-center.items-center.mx-auto
     .logo
       =image_tag "logo-brown.svg", class: "max-w-[16rem] block dark:hidden"
       =image_tag "logo-white.svg", class: "max-w-[16rem] hidden dark:block"
-    h1.text-6xl.font-extrabold.text-black.dark:text-white Build ambitious websites
-    p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Sitepress is a site generator built on top of Rails, which means you can embed it in a Rails app or run it stand-alone for static or server-side rendered websites.
-
-    .my-4.flex.flex-col.md:flex-row.gap-x-4.font-semibold.gap-y-6.justify-center.items-center
-      .font-bold.animate-pulse.hidden.md:inline-block Get started →
-      =link_to "Embed in a Rails App", "/getting-started/rails", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
-      =link_to "Build Stand-Alone Website", "/getting-started/static", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
+    .text-center.flex.flex-col.gap-4
+      h1.text-4xl.font-extrabold.text-black.dark:text-white=current_page.data.fetch("subtitle")
+      p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like frontmatter, sitemaps, and page models.
+    .flex.flex-col.gap-4
+      p.text-lg.font-semibold Get it running in your Rails application in under 2 minutes
+      pre.py-8.px-8.text-slate-200.bg-slate-800.rounded
+        code
+          |
+            $ bundle add sitepress-rails
+            $ bin/rails generate sitepress:install
   hr
 
   .flex.flex-col.min-w-full.gap-y-16.justify-center.items-center.py-12
@@ -63,6 +66,10 @@ layout: body
       =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
         h3.font-bold.text-2xl So many view helpers
         p All the view helpers you love in Rails are stock in Sitepress. From <code>time_ago_in_words</code> to <code>pluralize</code>.
+
+      =link_to page_path("getting-started/static"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Static compiler
+        p Sitepress also works as a static site compiler so you can eject the website out of your Rails app when you're ready to start breaking apart the monolith.
 
   hr
 
