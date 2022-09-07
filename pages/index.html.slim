@@ -9,9 +9,9 @@ layout: body
     .logo
       =image_tag "logo-brown.svg", class: "max-w-[16rem] block dark:hidden"
       =image_tag "logo-white.svg", class: "max-w-[16rem] hidden dark:block"
-    .text-center.flex.flex-col.gap-4
+    .text-center.flex.flex-col.gap-4.max-w-3xl
       h1.text-4xl.font-extrabold.text-black.dark:text-white=current_page.data.fetch("subtitle")
-      p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like frontmatter, sitemaps, and page models.
+      p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like Jekyll, Middleman, and Bridgetown.
     .flex.flex-col.gap-4
       p.text-lg.font-semibold Get it running in your Rails application in under 2 minutes
       pre.py-8.px-8.text-slate-200.bg-slate-800.rounded
@@ -19,6 +19,39 @@ layout: body
           |
             $ bundle add sitepress-rails
             $ bin/rails generate sitepress:install
+
+  hr
+
+  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl
+    hgroup.text-center.flex.flex-col.gap-y-2.mb-12
+      h2.text-4xl.font-extrabold All the features you need
+      h3.text-2xl Sitepress is packed with goodies that make building content websites fun and productive
+
+    .grid.gap-16.md:grid-cols-2
+      =link_to page_path("basics/frontmatter"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Frontmatter
+        p Add metadata to the top of your content pages that you can plug into your templates, collections, and more.
+
+      =link_to page_path("basics/globs"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Globbing
+        p Quickly generate lists, navigation menus, collections, and more with <code>Dir#glob</code>.
+
+      =link_to page_path("basics/models"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Page models
+        p Wrap pages in custom Ruby classes for even more powerful ways of traversing your sites content for navigation, grids, or collections.
+
+      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Layouts, partials, & pages
+        p Sitepress is built on top of Rails, so you will feel right at home rendering pages, layouts, & partials.
+
+      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Templating languages
+        p Markdown, Slim, HAML, and Erb. All the templating libraries that work with Rails will work with Sitepress, and that's a lot of stuff.
+
+      =link_to page_path("getting-started/static"), class: "flex flex-col gap-y-2" do
+        h3.font-bold.text-2xl Static compiler
+        p Sitepress also works as a static site compiler so you can eject the website out of your Rails app when you're ready to start breaking apart the monolith.
+
   hr
 
   .flex.flex-col.min-w-full.gap-y-16.justify-center.items-center.py-12
@@ -37,42 +70,6 @@ layout: body
 
   hr
 
-  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl
-    hgroup.text-center.flex.flex-col.gap-y-2.mb-12
-      h2.text-5xl.font-extrabold All the features you need
-      h3.text-3xl Sitepress is packed with goodies that make building websites fun & productive
-
-    .grid.gap-16.md:grid-cols-2
-      =link_to page_path("basics/frontmatter"), class: "flex flex-col gap-y-2" do
-        h3.font-bold.text-2xl Frontmatter
-        p Add metadata to the top of your content pages that you can plug into your templates, collections, and more.
-
-      =link_to page_path("basics/globs"), class: "flex flex-col gap-y-2" do
-        h3.font-bold.text-2xl Globbing
-        p Build collections and navigations intuitively from your file system using everything you know and love about <code>Dir#glob</code>.
-
-      =link_to page_path("basics/models"), class: "flex flex-col gap-y-2" do
-        h3.font-bold.text-2xl Page models
-        p Treat pages as data for even more powerful ways of traversing your sites content for navigation, grids, or collections.
-
-      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
-        h3.font-bold.text-2xl Layouts, partials, & pages
-        p Since Sitepress is built on top of Rails, developers will feel right at home rendering pages, layouts, & partials.
-
-      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
-        h3.font-bold.text-2xl Templating languages
-        p Erb, Markdown, Slim, HAML. Everything that works with Rails will work with Sitepress, and that's a lot of stuff.
-
-      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
-        h3.font-bold.text-2xl So many view helpers
-        p All the view helpers you love in Rails are stock in Sitepress. From <code>time_ago_in_words</code> to <code>pluralize</code>.
-
-      =link_to page_path("getting-started/static"), class: "flex flex-col gap-y-2" do
-        h3.font-bold.text-2xl Static compiler
-        p Sitepress also works as a static site compiler so you can eject the website out of your Rails app when you're ready to start breaking apart the monolith.
-
-  hr
-
   .flex.flex-col.min-w-full.gap-y-8.justify-center.items-center
     hgroup.text-center.flex.flex-col.gap-y-2
       h2.text-5xl.font-bold Get started
@@ -80,5 +77,5 @@ layout: body
     .my-4.flex.flex-col.md:flex-row.gap-x-4.font-semibold.gap-y-6.justify-center.items-center.text-center
       =link_to "Embed in a Rails App", "/getting-started/rails", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
       =link_to "Build Stand-Alone Website", "/getting-started/static", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
-
-
+    .flex.flex-row.gap-x-4
+      p If you're still not sure #{link_to "read the documentation", "/getting-started/rails", class: "underline"} or #{link_to "look at the source code on Github", "https://github.com/sitepress/sitepress", class: "underline"}.
