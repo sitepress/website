@@ -5,14 +5,14 @@ layout: body
 ---
 
 .flex.flex-col.gap-y-20.my-20.px-4
-  .flex.flex-col.max-w-4xl.gap-y-16.justify-center.items-center.mx-auto
+  .flex.flex-col.max-w-4xl.gap-y-16.items-center.mx-auto
     .logo
       =image_tag "logo-brown.svg", class: "max-w-[16rem] block dark:hidden"
       =image_tag "logo-white.svg", class: "max-w-[16rem] hidden dark:block"
     .text-center.flex.flex-col.gap-4.max-w-3xl
       h1.text-4xl.font-extrabold.text-black.dark:text-white=current_page.data.fetch("subtitle")
       p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like Jekyll, Middleman, and Bridgetown.
-    .prose.dark:prose-invert.text-lg
+    .prose.prose-lg.dark:prose-invert
       p Get it running in your Rails application in under 2 minutes
       pre
         code
