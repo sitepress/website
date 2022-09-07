@@ -27,10 +27,10 @@ layout: body
       h2.text-4xl.font-extrabold All the features you need
       h3.text-2xl Sitepress is packed with goodies that make building content websites fun and productive
 
-    .grid.gap-16.md:grid-cols-2
+    .grid.gap-10.md:grid-cols-2
       =link_to page_path("basics/frontmatter"), class: "flex flex-col gap-y-2" do
         h3.font-bold.text-2xl Frontmatter
-        p Add metadata to the top of your content pages that you can plug into your templates, collections, and more.
+        p Add metadata to the top of your content page files that you can plug into your templates, collections, and more.
 
       =link_to page_path("basics/globs"), class: "flex flex-col gap-y-2" do
         h3.font-bold.text-2xl Globbing
@@ -54,8 +54,8 @@ layout: body
 
   hr
 
-  .flex.flex-col.min-w-full.gap-y-16.justify-center.items-center.py-12
-    h2.text-5xl.font-extrabold.font-slate-100.mb-12 Why Sitepress?
+  .flex.flex-col.gap-y-16.justify-center.items-center.py-12
+    h2.text-4xl.font-extrabold.font-slate-100.mb-12 Why Sitepress?
     .prose.prose-lg.dark:prose-invert.max-w-3xl
       markdown:
         Static site generators are great frameworks for compiling static websites and publishing them to the web, but they force you to choose between running them completely static or inside of a Rails application. Sitepress lets you do both!
@@ -70,12 +70,12 @@ layout: body
 
   hr
 
-  .flex.flex-col.min-w-full.gap-y-8.justify-center.items-center
+  .flex.flex-col.gap-y-8.justify-center.items-center.max-w-xl.mx-auto
     hgroup.text-center.flex.flex-col.gap-y-2
-      h2.text-5xl.font-bold Get started
+      h2.text-4xl.font-bold Get started
       h3.text-2xl Setup takes just a few minutes regardless of your choice
     .my-4.flex.flex-col.md:flex-row.gap-x-4.font-semibold.gap-y-6.justify-center.items-center.text-center
       =link_to "Embed in a Rails App", "/getting-started/rails", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
       =link_to "Build Stand-Alone Website", "/getting-started/static", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
     .flex.flex-row.gap-x-4
-      p If you're still not sure #{link_to "read the documentation", "/getting-started/rails", class: "underline"} or #{link_to "look at the source code on Github", "https://github.com/sitepress/sitepress", class: "underline"}.
+      p If you're still not sure #{link_to "read the documentation", "/getting-started/rails", class: "underline"}, #{link_to "look at the source code on Github", "https://github.com/sitepress/sitepress", class: "underline"}, or just stop thinking about it and go for it.

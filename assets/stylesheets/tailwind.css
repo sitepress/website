@@ -1808,6 +1808,14 @@ select {
   max-width: 64rem;
 }
 
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1836,6 +1844,14 @@ select {
   gap: 4rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-y-16 {
   row-gap: 4rem;
 }
@@ -1859,6 +1875,11 @@ select {
 
 .gap-y-6 {
   row-gap: 1.5rem;
+}
+
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
