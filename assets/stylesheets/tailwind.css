@@ -1746,6 +1746,11 @@ select {
   margin-bottom: 2rem;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1880,6 +1885,10 @@ select {
 .gap-x-12 {
   -moz-column-gap: 3rem;
        column-gap: 3rem;
+}
+
+.gap-y-20 {
+  row-gap: 5rem;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
