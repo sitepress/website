@@ -12,9 +12,9 @@ layout: body
     .text-center.flex.flex-col.gap-4.max-w-3xl
       h1.text-4xl.font-extrabold.text-black.dark:text-white=current_page.data.fetch("subtitle")
       p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like Jekyll, Middleman, and Bridgetown.
-    .flex.flex-col.gap-4
-      p.text-lg.font-semibold Get it running in your Rails application in under 2 minutes
-      pre.py-8.px-8.text-slate-200.bg-slate-800.rounded
+    .prose.dark:prose-invert.text-lg
+      p Get it running in your Rails application in under 2 minutes
+      pre
         code
           |
             $ bundle add sitepress-rails
