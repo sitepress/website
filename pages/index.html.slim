@@ -5,7 +5,7 @@ layout: body
 ---
 
 .flex.flex-col.gap-y-20.my-20.px-4
-  .flex.flex-col.max-w-4xl.gap-y-16.items-center.mx-auto
+  .flex.flex-col.max-w-4xl.gap-y-12.items-center.mx-auto
     .logo
       =image_tag "logo-brown.svg", class: "max-w-[16rem] block dark:hidden"
       =image_tag "logo-white.svg", class: "max-w-[16rem] hidden dark:block"
@@ -19,6 +19,13 @@ layout: body
           |
             $ bundle add sitepress-rails
             $ bin/rails generate sitepress:install
+    .flex.flex-row.gap-x-4
+      a[href="https://github.com/sitepress/sitepress/actions/workflows/test.yml"]
+        img[src="https://github.com/sitepress/sitepress/actions/workflows/test.yml/badge.svg?branch=main" alt="Build status"]
+      a[href="https://badge.fury.io/rb/sitepress"]
+        img[src="https://badge.fury.io/rb/sitepress.svg" alt="Gem Version"]
+      a[href="https://codeclimate.com/github/sitepress/sitepress"]
+        img[src="https://codeclimate.com/github/sitepress/sitepress/badges/gpa.svg" alt="Code Climate"]
 
   hr
 
