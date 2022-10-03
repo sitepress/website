@@ -6,6 +6,27 @@ GIT
       rails (>= 6.0.0)
       redcarpet (>= 3.0.0)
 
+GIT
+  remote: https://github.com/sitepress/sitepress
+  revision: 053c23b150b16fa4dc1c32b173f00639a10d60a4
+  branch: main
+  specs:
+    sitepress (3.1.3)
+      sitepress-cli (= 3.1.3)
+    sitepress-cli (3.1.3)
+      rack (>= 1.0.0)
+      sitepress-server (= 3.1.3)
+      thor (>= 1.0.0)
+    sitepress-core (3.1.3)
+      mime-types (>= 2.99)
+    sitepress-rails (3.1.3)
+      actionpack (>= 6.0)
+      railties (>= 6.0)
+      sitepress-core (= 3.1.3)
+      sprockets-rails (>= 2.0.0)
+    sitepress-server (3.1.3)
+      sitepress-rails (= 3.1.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -142,21 +163,6 @@ GEM
     rake (13.0.6)
     redcarpet (3.5.1)
     rouge (4.0.0)
-    sitepress (3.1.2)
-      sitepress-cli (= 3.1.2)
-    sitepress-cli (3.1.2)
-      rack (>= 1.0.0)
-      sitepress-server (= 3.1.2)
-      thor (>= 1.0.0)
-    sitepress-core (3.1.2)
-      mime-types (>= 2.99)
-    sitepress-rails (3.1.2)
-      actionpack (>= 6.0)
-      railties (>= 6.0)
-      sitepress-core (= 3.1.2)
-      sprockets-rails (>= 2.0.0)
-    sitepress-server (3.1.2)
-      sitepress-rails (= 3.1.2)
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -194,7 +200,7 @@ DEPENDENCIES
   nokogiri (~> 1.13)
   redcarpet (~> 3.5)
   rouge (~> 4.0)
-  sitepress (~> 3.1)
+  sitepress (~> 3.0)!
   slim-rails
   webrick
 

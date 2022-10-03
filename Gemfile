@@ -1,17 +1,17 @@
 source "https://rubygems.org"
 
 # Stand-alone Sitepress server and compiler.
-gem "sitepress", "~> 3.1"
+# gem "sitepress", "~> 3.1"
 
-# if sitepress_gem_path = ENV["SITEPRESS_GEM_PATH"]
-#   gem "sitepress", path: sitepress_gem_path
-#   gem "sitepress-cli", path: sitepress_gem_path
-#   gem "sitepress-rails", path: sitepress_gem_path
-#   gem "sitepress-core", path: sitepress_gem_path
-#   gem "sitepress-server", path: sitepress_gem_path
-# else
-#   gem "sitepress", "~> 3.0", git: "https://github.com/sitepress/sitepress", branch: "main"
-# end
+if sitepress_gem_path = ENV["SITEPRESS_GEM_PATH"]
+  gem "sitepress", path: sitepress_gem_path
+  gem "sitepress-cli", path: sitepress_gem_path
+  gem "sitepress-rails", path: sitepress_gem_path
+  gem "sitepress-core", path: sitepress_gem_path
+  gem "sitepress-server", path: sitepress_gem_path
+else
+  gem "sitepress", "~> 3.0", git: "https://github.com/sitepress/sitepress", branch: "main"
+end
 
 # Server used for the Sitepress preview server.
 gem "webrick"
