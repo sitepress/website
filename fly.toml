@@ -1,6 +1,6 @@
 # Run `fly launch --copy-config` to provision and name this application.
 
-app = "sitepress-starter-site"
+app = "sitepress"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
