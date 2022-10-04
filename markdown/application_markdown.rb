@@ -3,10 +3,13 @@ require "rouge"
 
 # You should read the docs at https://github.com/vmg/redcarpet and probably
 # delete a bunch of stuff below if you don't need it.
-class ApplicationMarkdown < Markdown::Rails::Renderer::Rails
+class ApplicationMarkdown < MarkdownRails::Renderer::Rails
   # Reformats your boring punctation like " and " into “ and ” so you can look
   # and feel smarter. Read the docs at https://github.com/vmg/redcarpet#also-now-our-pants-are-much-smarter
   include Redcarpet::Render::SmartyPants
+
+  # Syntax Highlighting
+  include MarkdownRails::Helper::Rouge
 
   # If you need access to ActionController::Base.helpers, you can delegate by uncommenting
   # and adding to the list below. Several are already included for you in the `Markdown::Rails::Renderers::Rails`,
@@ -25,20 +28,6 @@ class ApplicationMarkdown < Markdown::Rails::Renderer::Rails
   # Make sure you know what you're doing if you're using this to render user inputs.
   def enable
     [:fenced_code_blocks]
-  end
-
-  FORMATTER = Rouge::Formatters::HTMLInline.new("gruvbox")
-
-  # These methods are called as the Markdown document is parsed. Block-level calls are
-  # documented at https://github.com/vmg/redcarpet#block-level-calls and span level calls
-  # are documented at https://github.com/vmg/redcarpet#block-level-calls so feel free to
-  # add more as you see fit.
-  def block_code(code, language)
-    language ||= "text"
-    lexer = Rouge::Lexer.find(language)
-    content_tag :pre, class: language do
-      raw FORMATTER.format(lexer.lex(code))
-    end
   end
 
   # Example of how you might override the images to show embeds, like a YouTube video.

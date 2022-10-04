@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/sitepress/markdown-rails.git
-  revision: 90b6f4c92ed737a52fef40d1aee5d9ac32bc2e62
+  revision: f95cc09888efcf4f20fb99e8ef8214c7979a0033
   specs:
-    markdown-rails (2.0.0.alpha3)
+    markdown-rails (2.0.0.alpha7)
       rails (>= 6.0.0)
       redcarpet (>= 3.0.0)
 
@@ -117,7 +117,7 @@ GEM
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     minitest (5.16.3)
-    net-imap (0.3.0)
+    net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
       net-protocol

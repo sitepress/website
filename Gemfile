@@ -18,7 +18,12 @@ gem "webrick"
 
 # Templating engines. Under the hood Sitepress uses a slimmed
 # down Rails, so rails templating engines should mostly work.
-gem "markdown-rails", github: "sitepress/markdown-rails"
+if markdown_rails_gem_path = ENV["MARKDOWN_RAILS_GEM_PATH"]
+  gem "markdown-rails", path: markdown_rails_gem_path
+else
+  gem "markdown-rails", github: "sitepress/markdown-rails"
+end
+
 gem "slim-rails"
 
 # Parse `publish_at` dates from blog posts
