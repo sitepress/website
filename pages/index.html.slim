@@ -5,7 +5,7 @@ layout: body
 ---
 
 .flex.flex-col.gap-y-20.my-20.px-4
-  .flex.flex-col.max-w-4xl.gap-y-12.items-center.justify-center.mx-auto class="min-h-[80vh]"
+  .flex.flex-col.max-w-4xl.gap-y-12.items-center.justify-center.mx-auto
     .logo
       =image_tag "logo-brown.svg", class: "max-w-[16rem] block dark:hidden"
       =image_tag "logo-white.svg", class: "max-w-[16rem] hidden dark:block"
@@ -26,11 +26,13 @@ layout: body
             $ gem install sitepress
             $ sitepress new my-site
 
-  hr
+      p.text-center The best part? You can change it later depending on your needs.
+
+  hr.opacity-90.dark:border-brown-800
 
   .flex.flex-col.gap-y-12.mx-auto.max-w-3xl
     hgroup.text-center.flex.flex-col.gap-y-2.mb-12
-      h2.text-4xl.font-extrabold All the features you need
+      h2.text-4xl.font-extrabold.text-brown-900 All the features you need
       h3.text-2xl Sitepress is packed with goodies that make building content websites fun and productive
 
     .grid.gap-10.md:grid-cols-2
@@ -58,32 +60,34 @@ layout: body
         h3.font-bold.text-2xl Static compiler
         p Sitepress also works as a static site compiler so you can eject the website out of your Rails app when you're ready to start breaking apart the monolith.
 
-  hr
 
-  .flex.flex-col.gap-y-16.justify-center.items-center
-    h2.text-4xl.font-extrabold.font-slate-100 Why Sitepress?
-    .prose.prose-lg.dark:prose-invert.max-w-3xl
-      markdown:
-        Static site generators are great frameworks for compiling static websites and publishing them to the web, but they force you to choose between running them completely static or inside of a Rails application. Sitepress lets you do both!
+  hr.opacity-90.dark:border-brown-800.md:hidden
 
-        Database-backed Rails content management systems like [Refinery CMS](http://www.refinerycms.com) and [Radiant CMS](http://radiantcms.org) are difficult to sync between development, test, staging, and production environments, making them difficult to use in multi-stage development or test-driven development workflows.
+  .flex-col.justify-center.items-center
+    .prose.prose-lg.dark:prose-invert.md:dark:prose.md:dark:prose-lg.md:shadow-2xl.md:px-12.md:py-16.md:mx-auto.rounded.md:bg-gradient-to-b.from-neutral-100.to-white.origin-top-left.md:rotate-1.md:hover:rotate-0.transition-all
+        markdown:
+          ## Why Sitepress?
 
-        Projects like [High Voltage](https://github.com/thoughtbot/high_voltage) make it possible to embed a small, basic site into Rails, but they lack powerful features like Frontmatter and Sitemap APIs required to make building non-trivial content sites possible. It also doesn't ship with a static site compiler.
+          Static site generators are great frameworks for compiling static websites and publishing them to the web, but they force you to choose between running them completely static or inside of a Rails application. Sitepress lets you do both!
 
-        Static site generators like [Jekyll](https://jekyllrb.com) and [Bridgetown](https://www.bridgetownrb.com) force you to choose static files as the output format, which can result in painful trade-offs down the road if you need to do something slightly dynamic on the server. Sitepress doesn't force this decision. Start the content site inside your Rails monolith to keep things simple, then when you're big enough to hire a content team, eject it into a stand-alone static or server-side rendered site. Or start with a stand-alone static site and move it into Rails later. The choice is yours to make whenever the time is appropriate.
+          Database-backed Rails content management systems like [Refinery CMS](http://www.refinerycms.com) and [Radiant CMS](http://radiantcms.org) are difficult to sync between development, test, staging, and production environments, making them difficult to use in multi-stage development or test-driven development workflows.
 
-        Sitepress is the missing piece. It has all the powerful features you'd expect from a fully featured static site generator, like Frontmatter support and hierarchal page traversal, but it's capable of being embedded inside any Rails, Sinatra, or Rack app. Since all of the content is just a bunch of files, its easy to incorporate Sitepress into a multi-stage or test-driven work environment.
+          Projects like [High Voltage](https://github.com/thoughtbot/high_voltage) make it possible to embed a small, basic site into Rails, but they lack powerful features like Frontmatter and Sitemap APIs required to make building non-trivial content sites possible. It also doesn't ship with a static site compiler.
 
-        If you're a soloprenuer building Rails applications, you'll love how easy it is to build content websites in your Rails app, which means you can spend more time shipping and less time worrying about your content management system.
+          Static site generators like [Jekyll](https://jekyllrb.com) and [Bridgetown](https://www.bridgetownrb.com) force you to choose static files as the output format, which can result in painful trade-offs down the road if you need to do something slightly dynamic on the server.
 
-  hr
+          Sitepress is the missing piece. It has all the powerful features you'd expect from a fully featured static site generator, like Frontmatter support and hierarchal page traversal, but it's capable of being embedded inside any Rails, Sinatra, or Rack app. Since all of the content is just a bunch of files, its easy to incorporate Sitepress into a multi-stage or test-driven work environment. Embed it in Rails today, make it stand-alone tomorrow. Or do the opposite.
+
+          If you're a soloprenuer building Rails applications, you'll love how easy it is to build content websites in your Rails app, which means you can spend more time shipping and less time worrying about your content management system.
+
+  hr.opacity-90.dark:border-brown-800.md:hidden
 
   .flex.flex-col.gap-y-8.justify-center.items-center.max-w-xl.mx-auto
     hgroup.text-center.flex.flex-col.gap-y-2
       h2.text-4xl.font-bold Get started
       h3.text-2xl Setup takes just a few minutes regardless of your choice
     .my-4.flex.flex-col.md:flex-row.gap-x-4.font-semibold.gap-y-6.justify-center.items-center.text-center
-      =link_to "Embed in a Rails App", "/getting-started/rails", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
-      =link_to "Build Stand-Alone Website", "/getting-started/static", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap"
+      =link_to "Embed in a Rails App", "/getting-started/rails", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap dark:bg-brown-800 dark:hover:bg-brown-700"
+      =link_to "Build Stand-Alone Website", "/getting-started/static", class: "min-w-full md:min-w-fit inline-block rounded bg-brown-900 hover:bg-brown-800 text-brown-100 py-4 px-8 dark:outline-1 whitespace-nowrap dark:bg-brown-800 dark:hover:bg-brown-700"
     .flex.flex-row.gap-x-4
       p If you're still not sure #{link_to "read the documentation", "/getting-started/rails", class: "underline"}, #{link_to "look at the source code on Github", "https://github.com/sitepress/sitepress", class: "underline"}, or just stop thinking about it and go for it.
