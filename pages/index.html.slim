@@ -5,27 +5,26 @@ layout: body
 ---
 
 .flex.flex-col.gap-y-20.my-20.px-4
-  .flex.flex-col.max-w-4xl.gap-y-12.items-center.mx-auto
+  .flex.flex-col.max-w-4xl.gap-y-12.items-center.justify-center.mx-auto class="min-h-[80vh]"
     .logo
       =image_tag "logo-brown.svg", class: "max-w-[16rem] block dark:hidden"
       =image_tag "logo-white.svg", class: "max-w-[16rem] hidden dark:block"
     .text-center.flex.flex-col.gap-4.max-w-3xl
       h1.text-4xl.font-extrabold.text-black.dark:text-white=current_page.data.fetch("subtitle")
       p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like Jekyll, Middleman, and Bridgetown.
-    .prose.prose-lg.dark:prose-invert
-      p Get it running in your Rails application in under 2 minutes
+    .prose.prose-lg.dark:prose-invert.min-w-max.max-w-xl
+      p.text-center #{link_to "Embed in a Rails app", "/getting-started/rails"} in under 2 minutes
       pre
-        code
+        code.min-w-full
           |
             $ bundle add sitepress-rails
             $ bin/rails generate sitepress:install
-    .flex.flex-row.gap-x-4
-      a[href="https://github.com/sitepress/sitepress/actions/workflows/test.yml"]
-        img[src="https://github.com/sitepress/sitepress/actions/workflows/test.yml/badge.svg?branch=main" alt="Build status"]
-      a[href="https://badge.fury.io/rb/sitepress"]
-        img[src="https://badge.fury.io/rb/sitepress.svg" alt="Gem Version"]
-      a[href="https://codeclimate.com/github/sitepress/sitepress"]
-        img[src="https://codeclimate.com/github/sitepress/sitepress/badges/gpa.svg" alt="Code Climate"]
+      p.text-center Or #{link_to "run it stand-alone", "/getting-started/static"} as a static site generator
+      pre
+        code.min-w-full
+          |
+            $ gem install sitepress
+            $ sitepress new my-site
 
   hr
 
@@ -70,6 +69,8 @@ layout: body
         Database-backed Rails content management systems like [Refinery CMS](http://www.refinerycms.com) and [Radiant CMS](http://radiantcms.org) are difficult to sync between development, test, staging, and production environments, making them difficult to use in multi-stage development or test-driven development workflows.
 
         Projects like [High Voltage](https://github.com/thoughtbot/high_voltage) make it possible to embed a small, basic site into Rails, but they lack powerful features like Frontmatter and Sitemap APIs required to make building non-trivial content sites possible. It also doesn't ship with a static site compiler.
+
+        Static site generators like [Jekyll](https://jekyllrb.com) and [Bridgetown](https://www.bridgetownrb.com) force you to choose static files as the output format, which can result in painful trade-offs down the road if you need to do something slightly dynamic on the server. Sitepress doesn't force this decision. Start the content site inside your Rails monolith to keep things simple, then when you're big enough to hire a content team, eject it into a stand-alone static or server-side rendered site. Or start with a stand-alone static site and move it into Rails later. The choice is yours to make whenever the time is appropriate.
 
         Sitepress is the missing piece. It has all the powerful features you'd expect from a fully featured static site generator, like Frontmatter support and hierarchal page traversal, but it's capable of being embedded inside any Rails, Sinatra, or Rack app. Since all of the content is just a bunch of files, its easy to incorporate Sitepress into a multi-stage or test-driven work environment.
 
