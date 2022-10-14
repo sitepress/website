@@ -1800,10 +1800,6 @@ select {
   max-width: 56rem;
 }
 
-.max-w-\[16rem\] {
-  max-width: 16rem;
-}
-
 .max-w-3xl {
   max-width: 48rem;
 }
