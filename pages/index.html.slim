@@ -5,28 +5,27 @@ layout: body
 ---
 
 .flex.flex-col.gap-y-20.my-20.px-4
-  .flex.flex-col.max-w-4xl.gap-y-12.items-center.justify-center.mx-auto
+  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl.justify-center.items-center.text-center
     .logo
       =image_tag "logo-brown.svg", class: "block dark:hidden", size: "260x260"
       =image_tag "logo-white.svg", class: "hidden dark:block", size: "260x260"
-    .text-center.flex.flex-col.gap-4.max-w-3xl
-      h1.text-4xl.font-extrabold.text-black.dark:text-white=current_page.data.fetch("subtitle")
-      p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like Jekyll, Middleman, and Bridgetown.
-    .prose.prose-lg.dark:prose-invert.min-w-max.max-w-xl
-      p.text-center #{link_to "Embed in a Rails app", "/getting-started/rails"} in under 2 minutes
-      pre
+    h1.text-4xl.font-extrabold.text-black.dark:text-white=current_page.data.fetch("subtitle")
+    p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like Jekyll, Middleman, and Bridgetown.
+    .prose.prose-lg.dark:prose-invert
+      p #{link_to "Embed in a Rails app", "/getting-started/rails"} in under 2 minutes
+      pre.text-left
         code.min-w-full
           |
             $ bundle add sitepress-rails
             $ bin/rails generate sitepress:install
-      p.text-center Or #{link_to "run it stand-alone", "/getting-started/static"} as a static site generator
-      pre
+      p Or #{link_to "run it stand-alone", "/getting-started/static"} as a static site generator
+      pre.text-left
         code.min-w-full
           |
             $ gem install sitepress
             $ sitepress new my-site
 
-      p.text-center The best part? You can change it later depending on your needs.
+      p The best part? You can change it later depending on your needs.
 
   hr.opacity-90.dark:border-brown-800
 
@@ -74,9 +73,9 @@ layout: body
 
           Projects like [High Voltage](https://github.com/thoughtbot/high_voltage) make it possible to embed a small, basic site into Rails, but they lack powerful features like Frontmatter and Sitemap APIs required to make building non-trivial content sites possible. It also doesn't ship with a static site compiler.
 
-          Static site generators like [Jekyll](https://jekyllrb.com) and [Bridgetown](https://www.bridgetownrb.com) force you to choose static files as the output format, which can result in painful trade-offs down the road if you need to do something slightly dynamic on the server.
+          Site generators like [Jekyll](https://jekyllrb.com), [Middleman](https://middlemanapp.com), and [Bridgetown](https://www.bridgetownrb.com) were not built with Rails integration as a primary concern, which can make embedding them in a Rails app more difficult because they have more outside dependencies to manage.
 
-          Sitepress is the missing piece. It has all the powerful features you'd expect from a fully featured static site generator, like Frontmatter support and hierarchal page traversal, but it's capable of being embedded inside any Rails, Sinatra, or Rack app. Since all of the content is just a bunch of files, its easy to incorporate Sitepress into a multi-stage or test-driven work environment. Embed it in Rails today, make it stand-alone tomorrow. Or do the opposite.
+          Sitepress is the missing piece. It has all the powerful features you'd expect from a fully featured static site generator, like Frontmatter support and hierarchical page traversal, but it's capable of being embedded inside any Rails, Sinatra, or Rack app. Since all of the content is just a bunch of files, its easy to incorporate Sitepress into a multi-stage or test-driven work environment. Embed it in Rails today, make it stand-alone tomorrow. Or do the opposite.
 
           If you're a soloprenuer building Rails applications, you'll love how easy it is to build content websites in your Rails app, which means you can spend more time shipping and less time worrying about your content management system.
 

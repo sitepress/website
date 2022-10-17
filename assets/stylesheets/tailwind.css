@@ -1721,6 +1721,10 @@ select {
   order: 5;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1952,6 +1956,10 @@ select {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
