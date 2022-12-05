@@ -30,37 +30,13 @@ $ sitepress server
 
 Your site will now be available at `http://127.0.0.1:8080/`
 
-## View Components
+## Components
 
-To get View Components working with Sitepress you'll have to add the gem and setup an autoload path.
+Sitepress supports [Phlex](https://phlex.fun/) and [View Components](https://viewcomponent.org) out of the box.
 
-First install the `view_component` gem
+### View Components
 
-```sh
-bundle add view_component
-```
-
-Then, from the root of the website you'll create a configuration file.
-
-```sh
-mkdir config/initializers
-touch config/initializers/view_component.rb
-```
-
-Now open the `config/initializers/view_component.rb` file and add the folowing:
-
-```ruby
-# config/initializers/view_component.rb file
-ActiveSupport::Dependencies.autoload_paths << "components"
-```
-
-Then from the root of your Sitepress project, create the `./components` directory.
-
-```sh
-mkdir components
-```
-
-Restart your server, then add a view component Ruby and template file.
+To use View Components in your project, add the files to the `./components` folder in the root of your project:
 
 ```ruby
 # ./components/message_component.rb
@@ -82,5 +58,24 @@ Then from any page in your site, render the component just like you would in Rai
 
 ```erb
 <h1>Welcome to my site!</h1>
-<% render MessageComponent.new(name: "hi") %>
+<%= render MessageComponent.new(name: "hi") %>
+```
+
+### Phlex
+
+To use Phlex in your project, add the files to the `./components` folder in the root of your project:
+
+```ruby
+# ./components/hello_world.rb
+class HelloWorld < Phlex::HTML
+  def initialize(greeting: "Hello World") = @greeting = greeting
+  def template = h1 { @greeting }
+end
+```
+
+Then from any page in your site, render the component just like you would in Rails:
+
+```erb
+<h1>Welcome to my site!</h1>
+<%= render HelloWorld.new(greeting: "It's me!") %>
 ```
