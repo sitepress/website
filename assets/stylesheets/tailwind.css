@@ -1721,10 +1721,6 @@ select {
   order: 5;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1790,18 +1786,8 @@ select {
   display: none;
 }
 
-.min-w-max {
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-
 .min-w-full {
   min-width: 100%;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
 }
 
 .max-w-3xl {
@@ -1844,10 +1830,6 @@ select {
 
 .justify-center {
   justify-content: center;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .gap-10 {

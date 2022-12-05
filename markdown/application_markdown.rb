@@ -41,6 +41,12 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
     end
   end
 
+  def header(text, header_level)
+    content_tag "h#{header_level}", id: text.downcase.gsub(/[^\w\d\s]/, "").gsub(" ", "-") do
+      text
+    end
+  end
+
   private
     # This is provided as an example; there's many more YouTube URLs that this wouldn't catch.
     def youtube_tag(url, alt)
