@@ -38,6 +38,6 @@ title: Youtube videos
 
 %h1=resource.data["title"]
 %ul
-  -resources.select{ |r| r.data["video_url"] =~ /youtube/ }.each do |page|
+  -site.resources.select{ |r| r.data["video_url"] =~ /youtube/ }.each do |page|
     %a{href: page.request_path}=page.data["title"]
 ```
