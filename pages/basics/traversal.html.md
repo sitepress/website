@@ -30,7 +30,18 @@ book.parent       # This would return nil since the `book` node doesn't have a p
 book.children     # Returns all of the chapters in `html-for-newbs` (chatper-1 .. chapter-3)
 ```
 
-The ability to traverse the site hierarchy is particularly useful when building site navigation components.
+The ability to traverse the site hierarchy is particularly useful when building site navigation components. For example, to show a navigation structure for the current page's sibling's children:
+
+```erb
+<% current_page.siblings.each do |section| %>
+  <h2><%= link_to_page section %></h2>
+  <ul>
+    <% section.children.each do |child| %>
+      <li><%= link_to_page child %></li>
+    <% end %>
+  </ul>
+<% end %>
+```
 
 ## Resource manipulation
 
