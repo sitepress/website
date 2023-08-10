@@ -45,12 +45,27 @@ The ability to traverse the site hierarchy is particularly useful when building 
 
 ## Resource manipulation
 
-What if you want to programmatically manipulate your resources? For example, you might want to set the layout for all pages shown under the url `youtube/` to `video`. With Site's `manipulate` function, this is easy:
+The first thing to know about resource manpulatioon is that you shouldn't do it. The beauty of Sitepress is you know the path `/blog/my-post` can be found in `./pages/blog/my-post.html.md`. When you change the direct mapping between the request path and asset path, you create a level of indirection that makes it more difficult for people to find and edit content.
+
+One more time, do everything you can to avoid manipulating resources! Just because you can do something doesn't mean you should.
+
+Ok, fine so you want to manipuate resources. Maybe you're coming over from Middleman and you have a bunch of blog posts with URLs like `/blog/my-post` stuck in folders like `./source/blog/2010-12-22/brad-was-here.html.md`. Middleman accomplished this with a process known as resource manipulation.
+
+Here's how you should not do it in Sitepress, not because you can't, but because you shouldn't:
 
 ```ruby
+# Please do everything you can to avoid needing to do this.
 site = Sitepress::Site.new(root_path: "/my/site")
-site.manipulate do |resource|
-  resource.data["layout"] = "video" if resource.data["video_url"] =~ /youtube/
+site.manipulate do |root|
+  blog = root.dig("blog")
+  blog.children.each do |date_folder|
+    post = date_folder.children.find { |resource| resource.formats.include? :html }
+    post.parent = blog
+    # PLEASE don't do this, just rename the underlying file instead to the slug and
+    # remove the `slug` key from the post's Frontmatter.
+    post.name = post.data.fetch("slug")
+    post.data["layout"] = "blog-layout"
+  end
 end
 ```
 
