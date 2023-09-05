@@ -1,7 +1,7 @@
 ---
 title: Models
 subtitle: Wrap pages in custom Ruby classes and treat them as objects
-order: 5
+order: 7
 ---
 
 Page Models are a powerful way to manage sets of pages and access their content programmatically from all other parts of the website. For example, if a website wants to feature pages for each member of their team, they might create the following pages in `./pages/people`.
