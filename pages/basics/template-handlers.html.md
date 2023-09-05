@@ -36,6 +36,6 @@ $ bundle add haml-rails
 
 Then restart your Sitepress or Rails server to pickup the new gem and add a `app/content/pages/my-slim-haml.html.haml` to your project to see it pickup the new Haml file.
 
-### Other templating engines
+## Other templating engines
 
 Sitepress works with any templating engine that Rails supports. If you want to add a new templating engine, just add the gem to your Gemfile and restart your server.
