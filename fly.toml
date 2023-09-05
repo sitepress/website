@@ -1,18 +1,18 @@
-# Run `fly launch --copy-config` to provision and name this application.
+# fly.toml app configuration file generated for sitepress on 2023-09-05T09:37:46-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
 app = "sitepress"
 kill_signal = "SIGINT"
 kill_timeout = 5
+primary_region = "sjc"
 processes = []
 
 [build]
-  [build.args]
-    BUNDLER_VERSION = "2.3.16"
-    NODE_VERSION = "14"
-    RUBY_VERSION = "3.1.1"
 
 [deploy]
-  # release_command = "bundle exec rails db:migrate"
+  strategy = "immediate"
 
 [env]
   PORT = "8080"

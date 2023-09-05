@@ -14,16 +14,17 @@ else
 end
 
 # Server used for the Sitepress preview server.
-gem "webrick"
+gem "puma"
 
 # Templating engines. Under the hood Sitepress uses a slimmed
 # down Rails, so rails templating engines should mostly work.
 if markdown_rails_gem_path = ENV["MARKDOWN_RAILS_GEM_PATH"]
   gem "markdown-rails", path: markdown_rails_gem_path
 else
-  gem "markdown-rails", github: "sitepress/markdown-rails"
+  gem "markdown-rails", github: "sitepress/markdown-rails", branch: "version-2"
 end
 
+# HTML templating engine
 gem "slim-rails"
 
 # Parse `publish_at` dates from blog posts
@@ -37,3 +38,5 @@ gem "redcarpet", "~> 3.5"
 gem "nokogiri", "~> 1.13"
 
 gem "rouge", "~> 4.0"
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
