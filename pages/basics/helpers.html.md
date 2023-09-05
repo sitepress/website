@@ -1,6 +1,6 @@
 ---
 title: Helpers
-subtitle: Handy methods for your view files
+subtitle: Methods and template handlers that make your views sing.
 order: 5
 ---
 
@@ -85,3 +85,17 @@ Then a child template can wrap itself in the parent template with the `render_la
   </main>
 <% end %>
 ```
+
+## Template handlers
+
+Since Sitepress runs on Rails, it gets to take advantage of its template infrastructure. That means you can add HAML, Markdown, Slim, and whatever template libraries you want to your project.
+
+### Markdown
+
+To add markdown to your Sitepress project, add the `markdown-rails` gem.
+
+```sh
+$ bundle add markdown-rails
+```
+
+Then restart your Sitepress or Rails server to pickup the new gem and add a `app/content/pages/my-page.html.md` to your project to see it pickup the new Markdown file.
