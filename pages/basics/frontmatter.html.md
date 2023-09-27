@@ -29,6 +29,21 @@ With a respective `video.html.haml` layout:
     %p=yield
 ```
 
+The data can also be accessed by calling dot methods for the keys.
+
+```haml
+!!!
+%html
+  %head
+    %title=resource.data.title!
+  %body
+    %h1=resource.data.title
+    %iframe{src: resource.data.vido_url}
+    %p=yield
+```
+
+Calling `resource.data.title!` will raise an exception of the data isn't found. Calling `Calling `resource.data.title!` will raise an exception of the data isn't found. Calling `resource.data.title` would return a `nil` value if the data is not present. The existence of a key can be checked by calling `resource.data.title?`
+
 The power of Frontmatter is its abililty to query data programatically from other templates. For example, if we have several video pages on our site, we can query them via the Site:
 
 ```haml
@@ -36,8 +51,8 @@ The power of Frontmatter is its abililty to query data programatically from othe
 title: Youtube videos
 ---
 
-%h1=resource.data["title"]
+%h1=resource.data.title
 %ul
-  -resources.select{ |r| r.data["video_url"] =~ /youtube/ }.each do |page|
-    %a{href: page.request_path}=page.data["title"]
+  -resources.select{ |r| r.data.video_url =~ /youtube/ }.each do |page|
+    %a{href: page.request_path}=page.data.title
 ```

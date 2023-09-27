@@ -43,6 +43,57 @@ The ability to traverse the site hierarchy is particularly useful when building 
 <% end %>
 ```
 
+## A Node has many Resources
+
+A "Node" can map to a file or folder in your Sitepress directory. Consider the following directory of files and folders in the pages directory.
+
+```
+└── pages
+    └── books
+      ├── html-for-newbs.html.haml
+      └── html-for-newbs
+          ├── chapter-1.html.md
+          ├── chapter-2.html.md
+          └── chapter-3.html.haml
+```
+
+The following Node and Resource structure will automatically be created by Sitepress.
+
+```ruby
+Node.new(name: "books", formats: []) do |books|
+  books.children >> Node.new(name: "html-for-newbs") do |html_newbs|
+    html_news.resources << Resource.new(format: :html, asset: Asset.new(path: "books/html-for-newbs.html.haml"))
+    html_news.children << Node.new(name: "chapter-1") do |chapter_1|
+      chapter_1.resources.add Resource.new(format: :html, asset: Asset.new(path: "books/html-for-newbs/chapter-1.html.md"))
+      end
+    end
+    html_news.children << Node.new(name: "chapter-2") do |chapter_2|
+      chapter_1.resources.add Resource.new(format: :html, asset: Asset.new(path: "books/html-for-newbs/chapter-2.html.md"))
+      end
+    end
+    html_news.children << Node.new(name: "chapter-3") do |chapter_3|
+      chapter_1.resources.add Resource.new(format: :html, asset: Asset.new(path: "books/html-for-newbs/chapter-3.html.md"))
+      end
+    end
+  end
+end
+```
+
+Here's an example that gets all of the child nodes of the `books` node, then grabs the HTML resource to display in a list.
+
+```erb
+<h2>Chapters</h2>
+<ol>
+  <% Sitepress.site.dig("books").children.each do |chapter_nodes| %>
+    <% if page = chapter_nodes.resources.format(:html) %>
+      <li>
+        <a href="<%= page.request_path %>"><%= page.data.title %></a>
+      </li>
+    <% end %>
+  <% end %>
+</ol>
+```
+
 ## Resource manipulation
 
 The first thing to know about resource manpulatioon is that you shouldn't do it. The beauty of Sitepress is you know the path `/blog/my-post` can be found in `./pages/blog/my-post.html.md`. When you change the direct mapping between the request path and asset path, you create a level of indirection that makes it more difficult for people to find and edit content.
