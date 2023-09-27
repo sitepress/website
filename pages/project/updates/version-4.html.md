@@ -6,16 +6,6 @@ publish_at: December 14, 2022
 
 Sitepress is undergoing quite a few changes from 3.x to 4.0. This covers the changes, in addition to serving as an ugprade guide.
 
-## Getting started
-
-Sitepress 4.0 is currently under active development. To add it to your project, change your Gemfile as follows:
-
-```ruby
-gem "sitepress", "~> 3.2", github: "sitepress/sitepress", branch: "version-4"
-```
-
-Then run `bundle update` and you should have the latest version of Sitepress.
-
 ## Breaking changes
 
 These changes will break your code if you're using the features.
@@ -37,7 +27,7 @@ end
 The old API passed a list of `resources` into the block, like this
 
 ```ruby
-# The old way
+# The old way, which no longer works.
 site.manipulate do |resource, root|
   # This would loop through all the resources,
   # passing 1 resource per iteration into this block
@@ -54,6 +44,10 @@ site.manipulate do |root|
   end
 end
 ```
+
+### Node and Resource Traversal
+
+The traversal API has been vastly improved, but the documentation was never public so I'm going to save myself a lot of time by not writing about the changes here. You can read the [Traversal API](/basics/traversal) and see how it works.
 
 ## Enhancements
 
@@ -118,3 +112,5 @@ Then call this from your pages as follows:
   <%= person.first_name %>
 <% end %>
 ```
+
+I might make this a permanent feature in a future version of Sitepress.
