@@ -35,7 +35,7 @@ module PageHelper
   end
 
   def order_glob(glob)
-    order_pages site.resources.glob(glob).select{ |r| r.data.has_key? "title" }
+    order_pages site.resources.glob(glob).select{ |r| r.data.title? }
   end
 
   def partial(path, **locals)
