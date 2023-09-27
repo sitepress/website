@@ -16,7 +16,7 @@ processes = []
 
 [env]
   PORT = "8080"
-  SERVER_COMMAND = "bundle exec sitepress server --no-site-reloading --no-site-error-reporting"
+  SERVER_COMMAND = "bundle exec sitepress server --no-site-reloading --no-site-error-reporting --bind-address 0.0.0.0"
 
 [experimental]
   allowed_public_ports = []
