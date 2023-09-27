@@ -10,7 +10,7 @@ if sitepress_gem_path = ENV["SITEPRESS_GEM_PATH"]
   gem "sitepress-core", path: sitepress_gem_path
   gem "sitepress-server", path: sitepress_gem_path
 else
-  gem "sitepress", "~> 3.0", git: "https://github.com/sitepress/sitepress", branch: "main"
+  gem "sitepress", "~> 4.0", git: "https://github.com/sitepress/sitepress", branch: "main"
 end
 
 # Server used for the Sitepress preview server.
