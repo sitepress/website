@@ -21,7 +21,7 @@ gem "puma"
 if markdown_rails_gem_path = ENV["MARKDOWN_RAILS_GEM_PATH"]
   gem "markdown-rails", path: markdown_rails_gem_path
 else
-  gem "markdown-rails", github: "sitepress/markdown-rails", branch: "version-2"
+  gem "markdown-rails", github: "sitepress/markdown-rails", branch: "main"
 end
 
 # HTML templating engine
