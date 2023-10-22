@@ -27,7 +27,7 @@ layout: body
 
       p The best part? You can change it later depending on your needs.
 
-  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl.border-brown-500.border-y.py-20
+  .flex.flex-col.gap-y-8.md:gap-y-4.mx-auto.max-w-3xl.border-brown-500.border-y.py-20
     hgroup.text-center.flex.flex-col.gap-y-2
       h2.text-4xl.font-extrabold Millions and millions of pages served
       h3.text-2xl Here's a few of the many websites running Sitepress in production
@@ -43,27 +43,27 @@ layout: body
       h3.text-2xl Sitepress is packed with goodies that make building content websites fun and productive
 
     .grid.gap-10.md:grid-cols-2
-      =link_to page_path("basics/frontmatter"), class: "flex flex-col gap-y-2" do
+      =link_to page_path("basics/frontmatter"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
         h3.font-bold.text-2xl Frontmatter
         p Add metadata to the top of your content page files that you can plug into your templates, collections, and more.
 
-      =link_to page_path("basics/globs"), class: "flex flex-col gap-y-2" do
+      =link_to page_path("basics/globs"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
         h3.font-bold.text-2xl Globbing
         p Quickly generate lists, navigation menus, collections, and more with <code>Dir#glob</code>.
 
-      =link_to page_path("basics/models"), class: "flex flex-col gap-y-2" do
+      =link_to page_path("basics/models"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
         h3.font-bold.text-2xl Page models
         p Wrap pages in custom Ruby classes for even more powerful ways of traversing your sites content for navigation, grids, or collections.
 
-      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
+      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
         h3.font-bold.text-2xl Layouts, partials, & pages
         p Sitepress is built on top of Rails, so you will feel right at home rendering pages, layouts, & partials.
 
-      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2" do
+      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
         h3.font-bold.text-2xl Templating languages
         p Markdown, Slim, HAML, and Erb. All the templating libraries that work with Rails will work with Sitepress, and that's a lot of stuff.
 
-      =link_to page_path("getting-started/static"), class: "flex flex-col gap-y-2" do
+      =link_to page_path("getting-started/static"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
         h3.font-bold.text-2xl Static compiler
         p Sitepress also works as a static site compiler so you can eject the website out of your Rails app when you're ready to start breaking apart the monolith.
 
