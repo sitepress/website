@@ -1,4 +1,10 @@
 module PageHelper
+  def logo(image:, url:, alt:)
+    link_to url, class: "flex items-center justify-center" do
+      image_tag image, class: "grayscale dark:invert", alt: alt
+    end
+  end
+
   def link_to_page(page)
     link_to page.data.fetch("title", page.request_path), page.request_path
   end

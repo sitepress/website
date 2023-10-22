@@ -31,6 +31,17 @@ layout: body
 
   .flex.flex-col.gap-y-12.mx-auto.max-w-3xl
     hgroup.text-center.flex.flex-col.gap-y-2.mb-12
+      h2.text-4xl.font-extrabold Billions and billions of pages served
+      h3.text-2xl Here's a few of the many websites running Sitepress in production
+    .grid.gap-12.md:grid-cols-3
+      =logo image: "logos/polleverywhere.png", url: "https://www.polleverywhere.com/", alt: "Poll Everywhere"
+      =logo image: "logos/flyio.svg", url: "https://fly.io/docs", alt: "Fly.io"
+      =logo image: "logos/pushpad.svg", url: "https://pushpad.xyz", alt: "Push Pad"
+
+  hr.opacity-90.dark:border-brown-800
+
+  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl
+    hgroup.text-center.flex.flex-col.gap-y-2.mb-12
       h2.text-4xl.font-extrabold All the features you need
       h3.text-2xl Sitepress is packed with goodies that make building content websites fun and productive
 

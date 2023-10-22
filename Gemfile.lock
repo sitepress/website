@@ -9,8 +9,10 @@ GIT
       railties (>= 6.0.0)
       redcarpet (>= 3.0.0)
 
-PATH
-  remote: ../sitepress
+GIT
+  remote: https://github.com/sitepress/sitepress
+  revision: 5cc78334d2a0688c9b60252c06c43da884df50f6
+  branch: main
   specs:
     sitepress (4.0.2)
       sitepress-cli (= 4.0.2)
@@ -242,11 +244,7 @@ DEPENDENCIES
   puma
   redcarpet (~> 3.5)
   rouge (~> 4.0)
-  sitepress!
-  sitepress-cli!
-  sitepress-core!
-  sitepress-rails!
-  sitepress-server!
+  sitepress (~> 4.0)!
   slim-rails
 
 BUNDLED WITH
