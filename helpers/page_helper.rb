@@ -1,6 +1,6 @@
 module PageHelper
   def logo(image:, url:, alt:)
-    link_to url, class: "flex items-center justify-center" do
+    link_to url, class: "flex items-center justify-center hover:scale-105 transition" do
       image_tag image, class: "grayscale dark:invert", alt: alt
     end
   end
