@@ -1,6 +1,6 @@
 ---
 title: Helpers
-subtitle: Methods and template handlers that make your views sing.
+subtitle: Methods and template handlers that make your views sing
 order: 5
 ---
 
