@@ -60,14 +60,21 @@ layout: body
         h3.font-bold.text-2xl Layouts, partials, & pages
         p Sitepress is built on top of Rails, so you will feel right at home rendering pages, layouts, & partials.
 
-      =link_to page_path("basics/helpers"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
+      =link_to page_path("basics/markdown"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
+        h3.font-bold.text-2xl Customizable Markdown
+        p Create your own flavors of Markdown to handle code highlighting, table of contents, anchor links, and more.
+
+      =link_to page_path("basics/template-handlers"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
         h3.font-bold.text-2xl Templating languages
-        p Markdown, Slim, HAML, and Erb. All the templating libraries that work with Rails will work with Sitepress, and that's a lot of stuff.
+        p Slim, HAML, Markdown, and Erb. All the templating libraries that work with Rails will work with Sitepress, and that's a lot of stuff.
 
       =link_to page_path("getting-started/static"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
         h3.font-bold.text-2xl Static compiler
         p Sitepress also works as a static site compiler so you can eject the website out of your Rails app when you're ready to start breaking apart the monolith.
 
+      =link_to page_path("getting-started/rails"), class: "flex flex-col gap-y-2 hover:scale-105 transition" do
+        h3.font-bold.text-2xl Embed it in Rails
+        p Sitepress is perfectly happy, and performant, serving up content right inside your Rails app without the compilation step.
 
   hr.opacity-90.dark:border-brown-800.md:hidden
 
