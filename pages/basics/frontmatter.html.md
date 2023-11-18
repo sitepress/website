@@ -38,7 +38,7 @@ The data can also be accessed by calling dot methods for the keys.
     %title=resource.data.title!
   %body
     %h1=resource.data.title
-    %iframe{src: resource.data.vido_url}
+    %iframe{src: resource.data.video_url}
     %p=yield
 ```
 
