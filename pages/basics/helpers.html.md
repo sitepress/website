@@ -36,7 +36,7 @@ The `link_to_page` method will automatically create a link to a `Sitepress::Reso
 
 ### `render_layout`
 
-Sitepress has a composable layout system that makes templating more reusable than what you're accusomted to in Rails.
+Sitepress has a composable layout system that makes templating more reusable than what you're accustomed to in Rails.
 
 For example, the following is the base template at `./layouts/body.html.erb` that deals with basic HTML concerns like the `head` and `body` tag:
 
@@ -76,7 +76,7 @@ Then a child template can wrap itself in the parent template with the `render_la
         <%= partial "partials/menu", title: "Project", glob: "project/*.html*" %>
       </div>
     </nav>
-    <aside class="order-5 md:order-4 z-50">
+    <footer class="order-5 md:order-4 z-50">
       <%= link_to "/" do %>
         <%= image_tag "logo-brown.svg", class: "max-w-[8rem] block dark:hidden" %>
         <%= image_tag "logo-white.svg", class: "max-w-[8rem] hidden dark:block" %>
