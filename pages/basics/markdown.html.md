@@ -47,7 +47,7 @@ It's common to extend the Markdown renderer to support features like code-highli
 # delete a bunch of stuff below if you don't need it.
 
 class ApplicationMarkdown < MarkdownRails::Renderer::Rails
-  # Reformats your boring punctation like " and " into “ and ” so you can look
+  # Reformats your boring punctuation like " and " into “ and ” so you can look
   # and feel smarter. Read the docs at https://github.com/vmg/redcarpet#also-now-our-pants-are-much-smarter
   include Redcarpet::Render::SmartyPants
 

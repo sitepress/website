@@ -4,7 +4,7 @@ subtitle: Changes from 3.x and an upgrade guide
 publish_at: December 14, 2022
 ---
 
-Sitepress is undergoing quite a few changes from 3.x to 4.0. This covers the changes, in addition to serving as an ugprade guide.
+Sitepress is undergoing quite a few changes from 3.x to 4.0. This covers the changes, in addition to serving as an upgrade guide.
 
 ## Breaking changes
 
@@ -34,7 +34,7 @@ site.manipulate do |resource, root|
 end
 ```
 
-To continue using the `resources` iteration method of site manipuation, you'll need to manually iterate through all of the resources from the `root` node.
+To continue using the `resources` iteration method of site manipulation, you'll need to manually iterate through all of the resources from the `root` node.
 
 ```ruby
 # Getting the old way to work the new way
@@ -81,7 +81,6 @@ current_page.data.gone! { "default" } # => "default"
 ```
 
 No changes need to be made to upgrade since `Resource#data` is still accessible via the Hash syntaxes.
-
 
 ### Data Files
 

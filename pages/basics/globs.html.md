@@ -39,7 +39,7 @@ The `videos.html.haml` template would render `HTML` that links to the videos in 
 ```haml
 %html
   %head
-    %title Vidoes
+    %title Videos
   %body
     %ul.videos
       -site.resources.glob("videos/*.html.*").each do |page|
