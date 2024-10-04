@@ -96,11 +96,11 @@ Here's an example that gets all of the child nodes of the `books` node, then gra
 
 ## Resource manipulation
 
-The first thing to know about resource manpulatioon is that you shouldn't do it. The beauty of Sitepress is you know the path `/blog/my-post` can be found in `./pages/blog/my-post.html.md`. When you change the direct mapping between the request path and asset path, you create a level of indirection that makes it more difficult for people to find and edit content.
+The first thing to know about resource manipulation is that you shouldn't do it. The beauty of Sitepress is you know the path `/blog/my-post` can be found in `./pages/blog/my-post.html.md`. When you change the direct mapping between the request path and asset path, you create a level of indirection that makes it more difficult for people to find and edit content.
 
 One more time, do everything you can to avoid manipulating resources! Just because you can do something doesn't mean you should.
 
-Ok, fine so you want to manipuate resources. Maybe you're coming over from Middleman and you have a bunch of blog posts with URLs like `/blog/my-post` stuck in folders like `./source/blog/2010-12-22/brad-was-here.html.md`. Middleman accomplished this with a process known as resource manipulation.
+Ok, fine so you want to manipulate resources. Maybe you're coming over from Middleman and you have a bunch of blog posts with URLs like `/blog/my-post` stuck in folders like `./source/blog/2010-12-22/brad-was-here.html.md`. Middleman accomplished this with a process known as resource manipulation.
 
 Here's how you should not do it in Sitepress, not because you can't, but because you shouldn't:
 
