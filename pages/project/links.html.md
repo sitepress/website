@@ -11,7 +11,7 @@ Various links related to the Sitepress project.
 * [sitepress-cli](http://www.rubydoc.info/gems/sitepress-cli) - Command line interface.
 * [sitepress-core](http://www.rubydoc.info/gems/sitepress-core) - Core library documentation.
 * [sitepress-rails](http://www.rubydoc.info/gems/sitepress-rails) - Rails integration documentation.
-* [sitepress-server](http://www.rubydoc.info/gems/sitepress-server) - Rack server documenation. This server may be embedded into any Rack application.
+* [sitepress-server](http://www.rubydoc.info/gems/sitepress-server) - Rack server documentation. This server may be embedded into any Rack application.
 
 ## Other links
 

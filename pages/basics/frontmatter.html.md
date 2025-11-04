@@ -38,13 +38,13 @@ The data can also be accessed by calling dot methods for the keys.
     %title=resource.data.title!
   %body
     %h1=resource.data.title
-    %iframe{src: resource.data.vido_url}
+    %iframe{src: resource.data.video_url}
     %p=yield
 ```
 
 Calling `resource.data.title!` will raise an exception of the data isn't found. Calling `Calling `resource.data.title!` will raise an exception of the data isn't found. Calling `resource.data.title` would return a `nil` value if the data is not present. The existence of a key can be checked by calling `resource.data.title?`
 
-The power of Frontmatter is its abililty to query data programatically from other templates. For example, if we have several video pages on our site, we can query them via the Site:
+The power of Frontmatter is its ability to query data programmatically from other templates. For example, if we have several video pages on our site, we can query them via the Site:
 
 ```haml
 ---

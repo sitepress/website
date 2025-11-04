@@ -36,7 +36,7 @@ The `link_to_page` method will automatically create a link to a `Sitepress::Reso
 
 ### `render_layout`
 
-Sitepress has a composable layout system that makes templating more reusable than what you're accusomted to in Rails.
+Sitepress has a composable layout system that makes templating more reusable than what you're accustomed to in Rails.
 
 For example, the following is the base template at `./layouts/body.html.erb` that deals with basic HTML concerns like the `head` and `body` tag:
 
