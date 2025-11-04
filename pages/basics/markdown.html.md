@@ -31,6 +31,9 @@ $ bin/rails g markdown_rails:install
 
 This installs Markdown in your Rails application and gives you a few renderers you can extend.
 
+>[!note]
+> To use the default markdown renderer, create files using the `html.md` extension, not just `md`. 
+
 If you're running Sitepress stand-alone, you can still extend the Markdown renderers, but you'll create the files manually in `./config/initializers/markdown.rb`.
 
 The instructions below walk through how to extend the Markdown Renderer for stand-alone Sitepress.
