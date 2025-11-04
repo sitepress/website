@@ -7,8 +7,8 @@ order: 4
 Frontmatter is a way to add metadata to your pages and access it from templates and the sitemap. Consider the following page:
 
 ```md
-----
-title: Apollo 40th anniversary
+---
+title: Apollo 40th anniversery
 layout: video
 video_url: https://www.youtube.com/watch?v=ez0bFWKR9-0
 ---
