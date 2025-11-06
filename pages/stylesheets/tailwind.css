@@ -2692,6 +2692,11 @@ select {
   background-color: rgb(151 118 105 / var(--tw-bg-opacity));
 }
 
+.bg-brown-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 248 246 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -3106,10 +3111,6 @@ select {
     margin-right: auto;
   }
 
-  .md\:mt-12 {
-    margin-top: 3rem;
-  }
-
   .md\:mt-8 {
     margin-top: 2rem;
   }
@@ -3127,10 +3128,6 @@ select {
   .md\:rotate-1 {
     --tw-rotate: 1deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:grid-cols-2 {
