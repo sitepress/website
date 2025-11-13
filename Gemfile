@@ -3,11 +3,14 @@ source "https://rubygems.org"
 # Stand-alone Sitepress server and compiler.
 # gem "sitepress", "~> 3.1"
 
+# HTML templating engine
+gem "slim-rails", "~> 3.6"
+
 if sitepress_gem_path = ENV["SITEPRESS_GEM_PATH"]
-  gem "sitepress", path: sitepress_gem_path
-  gem "sitepress-cli", path: sitepress_gem_path
-  gem "sitepress-rails", path: sitepress_gem_path
-  gem "sitepress-core", path: sitepress_gem_path
+  gem "sitepress",        path: sitepress_gem_path
+  gem "sitepress-cli",    path: sitepress_gem_path
+  gem "sitepress-rails",  path: sitepress_gem_path
+  gem "sitepress-core",   path: sitepress_gem_path
   gem "sitepress-server", path: sitepress_gem_path
 else
   gem "sitepress", "~> 4.0", git: "https://github.com/sitepress/sitepress", branch: "main"
@@ -24,8 +27,7 @@ else
   gem "markdown-rails", github: "sitepress/markdown-rails", branch: "main"
 end
 
-# HTML templating engine
-gem "slim-rails"
+gem "rails", "~> 8.0.0"
 
 # Parse `publish_at` dates from blog posts
 gem "chronic", "~> 0.10.2"
@@ -40,3 +42,5 @@ gem "nokogiri", "~> 1.13"
 gem "rouge", "~> 4.0"
 
 gem "dockerfile-rails", ">= 1.5", :group => :development
+
+gem "haml-rails", "~> 3.0"
