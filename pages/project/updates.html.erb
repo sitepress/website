@@ -4,10 +4,12 @@ subtitle: News, updates, and changes about Sitepress
 order: 1
 ---
 
-<% UpdatePage.all.each do |page| %>
-  <div class="flex flex-col not-prose">
-    <%= link_to page.title, page.request_path, class: "font-bold text-xl" %>
-    <p><%= page.subtitle %></p>
-    <p class="opacity-70">Published <%= page.publish_at.to_date.to_formatted_s(:long) %></p>
-  </div>
-<% end %>
+<ul class="not-prose space-y-8 p-0">
+  <% UpdatePage.all.each do |page| %>
+    <li class="flex flex-col">
+      <%= link_to page.title, page.request_path, class: "font-bold text-xl" %>
+      <p><%= page.subtitle %></p>
+      <p class="opacity-70">Published <%= page.publish_at.to_date.to_formatted_s(:long) %></p>
+    </li>
+  <% end %>
+</ul>
