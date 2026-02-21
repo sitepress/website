@@ -4,14 +4,14 @@ subtitle: Build ambitious content websites in Rails
 layout: body
 ---
 
-.flex.flex-col.gap-y-20.my-20.px-4
-  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl.justify-center.items-center.text-center
+.flex.flex-col.gap-y-20.my-20.px-4.ogplus:grid.ogplus:place-items-center.ogplus:h-screen.ogplus:my-0.ogplus:gap-0.ogplus:p-0
+  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl.justify-center.items-center.text-center.ogplus:gap-y-8
     .logo
-      =image_tag "logo-brown.svg", class: "block dark:hidden", size: "260x260"
-      =image_tag "logo-white.svg", class: "hidden dark:block", size: "260x260"
+      =image_tag "logo-brown.svg", class: "block dark:hidden ogplus:max-w-[11rem]", size: "260x260"
+      =image_tag "logo-white.svg", class: "hidden dark:block ogplus:max-w-[11rem]", size: "260x260"
     h1.text-4xl.font-extrabold.text-black.dark:text-white=current_page.data.fetch("subtitle")
-    p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70 Manage content files in Rails with the same features you'd expect from static site generators like Jekyll, Middleman, and Bridgetown.
-    .prose.prose-lg.dark:prose-invert
+    p.text-2xl.text-brown-900.dark:text-brown-400.opacity-70.ogplus:hidden Manage content files in Rails with the same features you'd expect from static site generators like Jekyll, Middleman, and Bridgetown.
+    .prose.prose-lg.dark:prose-invert.ogplus:hidden
       p #{link_to "Embed in a Rails app", "/getting-started/rails"} in under 2 minutes
       pre.text-left
         code.min-w-full
@@ -27,7 +27,7 @@ layout: body
 
       p The best part? You can change it later depending on your needs.
 
-  .flex.flex-col.gap-y-8.md:gap-y-4.mx-auto.max-w-3xl.border-brown-500.border-y.py-20
+  .flex.flex-col.gap-y-8.md:gap-y-4.mx-auto.max-w-3xl.border-brown-500.border-y.py-20.ogplus:hidden
     hgroup.text-center.flex.flex-col.gap-y-2
       h2.text-4xl.font-extrabold Millions and millions of pages served
       h3.text-2xl Here's a few of the many websites running Sitepress in production
@@ -38,7 +38,7 @@ layout: body
       =logo image: "logos/hotwire.svg", url: "https://hotwire.io", alt: "Hotwire"
       =logo image: "logos/pushpad.svg", url: "https://pushpad.xyz", alt: "Push Pad"
 
-  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl
+  .flex.flex-col.gap-y-12.mx-auto.max-w-3xl.ogplus:hidden
     hgroup.text-center.flex.flex-col.gap-y-2.mb-12
       h2.text-4xl.font-extrabold All the features you need
       h3.text-2xl Sitepress is packed with goodies that make building content websites fun and productive
@@ -76,9 +76,9 @@ layout: body
         h3.font-bold.text-2xl Embed it in Rails
         p Sitepress is perfectly happy, and performant, serving up content right inside your Rails app without the compilation step.
 
-  hr.opacity-90.dark:border-brown-800.md:hidden
+  hr.opacity-90.dark:border-brown-800.md:hidden.ogplus:hidden
 
-  .flex-col.justify-center.items-center
+  .flex-col.justify-center.items-center.ogplus:hidden
     .prose.prose-lg.dark:prose-invert.md:dark:prose.md:dark:prose-lg.md:shadow-2xl.md:px-12.md:py-16.md:mx-auto.rounded.md:bg-gradient-to-b.from-neutral-100.to-white.origin-top-left.md:rotate-1.md:hover:rotate-0.transition-all
         markdown:
           ## Why Sitepress?
@@ -95,9 +95,9 @@ layout: body
 
           If you're a solopreneur building Rails applications, you'll love how easy it is to build content websites in your Rails app, which means you can spend more time shipping and less time worrying about your content management system.
 
-  hr.opacity-90.dark:border-brown-800.md:hidden
+  hr.opacity-90.dark:border-brown-800.md:hidden.ogplus:hidden
 
-  .flex.flex-col.gap-y-8.justify-center.items-center.max-w-xl.mx-auto
+  .flex.flex-col.gap-y-8.justify-center.items-center.max-w-xl.mx-auto.ogplus:hidden
     hgroup.text-center.flex.flex-col.gap-y-2
       h2.text-4xl.font-bold Get started
       h3.text-2xl Setup takes just a few minutes regardless of your choice

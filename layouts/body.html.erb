@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html class="dark:text-slate-200 dark:bg-brown-900">
+<html class="dark:text-slate-200 dark:bg-brown-900 ogplus:h-full">
   <head>
+    <title><%= current_page.data.title %></title>
     <meta charset=utf-8>
     <meta name = "viewport" content = "width = device-width">
-    <title><%= current_page.data.fetch("title") %></title>
+    <%= meta_tag "og:image", "https://bv3xdmwr.ogplus.net#{current_page.request_path}" %>
+    <%= meta_tag "og:plus:viewport:width", "800" %>
+    <%= meta_tag "og:title", current_page.data.title %>
+    <%= meta_tag "og:description", current_page.data.subtitle %>
+    <%= meta_tag "og:url", request.original_url %>
+    <%= meta_tag "og:type", "website" %>
+    <%= meta_tag "twitter:card", "summary_large_image" %>
+    <%= meta_tag "twitter:title", current_page.data.title %>
+    <%= meta_tag "twitter:description", current_page.data.subtitle %>
+    <%= meta_tag "twitter:image", "https://bv3xdmwr.ogplus.net#{current_page.request_path}" %>
     <%= stylesheet_link_tag "tailwind" %>
     <script defer data-domain="sitepress.cc" src="https://plausible.io/js/plausible.js"></script>
   </head>
-  <body>
+  <body class="ogplus:h-full">
     <%= yield %>
   </body>
 </html>

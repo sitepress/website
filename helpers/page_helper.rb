@@ -1,4 +1,8 @@
 module PageHelper
+  def meta_tag(name, value)
+    tag.meta(name: name, content: value) if value.present?
+  end
+
   def logo(image:, url:, alt:)
     link_to url, class: "flex items-center justify-center hover:scale-105 transition px-20 md:p-4" do
       image_tag image, class: "grayscale dark:invert", alt: alt

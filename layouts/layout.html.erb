@@ -1,26 +1,26 @@
 <%= render_layout "body" do %>
-  <main class="grid grid-cols-1 gap-y-16 md:gap-y-24 py-16 md:py-24 px-4 md:px-16 md:gap-x-16 md:grid-cols-[max-content_minmax(0,_1fr)]">
-    <header class="md:col-start-2 order-1 md:order-1">
+  <main class="grid grid-cols-1 gap-y-16 md:gap-y-24 py-16 md:py-24 px-4 md:px-16 md:gap-x-16 md:grid-cols-[max-content_minmax(0,_1fr)] ogplus:grid-cols-[max-content_1fr] ogplus:items-center ogplus:content-center ogplus:min-h-full ogplus:py-24 ogplus:px-16 ogplus:gap-x-12">
+    <header class="md:col-start-2 order-1 md:order-1 ogplus:order-2 ogplus:col-start-auto">
       <h1 class="text-5xl font-extrabold text-brown-900 dark:text-white"><%= current_page.data["title"] %></h1>
       <% if subtitle = current_page.data["subtitle"] %>
         <h2 class="text-2xl opacity-50"><%= subtitle %></h2>
       <% end %>
     </header>
-    <article class="prose dark:prose-invert max-w-fit order-2 md:order-3">
+    <article class="prose dark:prose-invert max-w-fit order-2 md:order-3 ogplus:hidden">
       <%= yield %>
     </article>
-    <nav class="order-3 md:order-2">
+    <nav class="order-3 md:order-2 ogplus:hidden">
       <div class="md:top-16 md:sticky flex flex-col space-y-8">
         <%= partial "partials/menu", title: "Getting Started", glob: "getting-started/*.html*" %>
         <%= partial "partials/menu", title: "Documentation", glob: "basics/*.html*" %>
         <%= partial "partials/menu", title: "Project", glob: "project/*.html*" %>
       </div>
     </nav>
-    <aside class="order-5 md:order-4 z-50">
+    <aside class="order-5 md:order-4 ogplus:order-1 ogplus:flex ogplus:items-center">
       <%= link_to "/" do %>
-        <%= image_tag "logo-brown.svg", class: "max-w-[8rem] block dark:hidden" %>
-        <%= image_tag "logo-white.svg", class: "max-w-[8rem] hidden dark:block" %>
+        <%= image_tag "logo-brown.svg", class: "max-w-[8rem] ogplus:max-w-[12rem] block dark:hidden" %>
+        <%= image_tag "logo-white.svg", class: "max-w-[8rem] ogplus:max-w-[12rem] hidden dark:block" %>
       <% end %>
-    </footer>
+    </aside>
   </main>
 <% end %>
