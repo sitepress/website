@@ -2227,6 +2227,11 @@
       min-height: 100%;
     }
   }
+  .ogplus\:max-w-\[10rem\] {
+    :where([data-ogplus]) & {
+      max-width: 10rem;
+    }
+  }
   .ogplus\:max-w-\[11rem\] {
     :where([data-ogplus]) & {
       max-width: 11rem;
@@ -2235,6 +2240,16 @@
   .ogplus\:max-w-\[12rem\] {
     :where([data-ogplus]) & {
       max-width: 12rem;
+    }
+  }
+  .ogplus\:max-w-\[14rem\] {
+    :where([data-ogplus]) & {
+      max-width: 14rem;
+    }
+  }
+  .ogplus\:flex-1 {
+    :where([data-ogplus]) & {
+      flex: 1;
     }
   }
   .ogplus\:grid-cols-\[max-content_1fr\] {
@@ -2257,6 +2272,11 @@
       align-items: center;
     }
   }
+  .ogplus\:justify-center {
+    :where([data-ogplus]) & {
+      justify-content: center;
+    }
+  }
   .ogplus\:gap-0 {
     :where([data-ogplus]) & {
       gap: calc(var(--spacing) * 0);
@@ -2265,6 +2285,11 @@
   .ogplus\:gap-x-12 {
     :where([data-ogplus]) & {
       column-gap: calc(var(--spacing) * 12);
+    }
+  }
+  .ogplus\:gap-y-0 {
+    :where([data-ogplus]) & {
+      row-gap: calc(var(--spacing) * 0);
     }
   }
   .ogplus\:gap-y-8 {
